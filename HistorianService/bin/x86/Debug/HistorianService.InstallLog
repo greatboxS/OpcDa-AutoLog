@@ -1,0 +1,43 @@
+﻿Installing assembly 'D:\TECHGEL\OPC\OPCDA_Solution\HistorianService\bin\x86\Debug\HistorianService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\TECHGEL\OPC\OPCDA_Solution\HistorianService\bin\x86\Debug\HistorianService.InstallLog
+   assemblypath = D:\TECHGEL\OPC\OPCDA_Solution\HistorianService\bin\x86\Debug\HistorianService.exe
+Installing service OpcLogger...
+Service OpcLogger has been successfully installed.
+Creating EventLog source OpcLogger in log Application...
+Committing assembly 'D:\TECHGEL\OPC\OPCDA_Solution\HistorianService\bin\x86\Debug\HistorianService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\TECHGEL\OPC\OPCDA_Solution\HistorianService\bin\x86\Debug\HistorianService.InstallLog
+   assemblypath = D:\TECHGEL\OPC\OPCDA_Solution\HistorianService\bin\x86\Debug\HistorianService.exe
+Uninstalling assembly 'D:\TECHGEL\OPC\OPCDA_Solution\HistorianService\bin\x86\Debug\HistorianService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\TECHGEL\OPC\OPCDA_Solution\HistorianService\bin\x86\Debug\HistorianService.InstallLog
+   assemblypath = D:\TECHGEL\OPC\OPCDA_Solution\HistorianService\bin\x86\Debug\HistorianService.exe
+Removing EventLog source OpcLogger.
+Service OpcLogger is being removed from the system...
+Service OpcLogger was successfully removed from the system.
+Attempt to stop service OpcLogger.
+Installing assembly 'D:\TECHGEL\OPC\OPCDA_Solution\HistorianService\bin\x86\Debug\HistorianService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\TECHGEL\OPC\OPCDA_Solution\HistorianService\bin\x86\Debug\HistorianService.InstallLog
+   assemblypath = D:\TECHGEL\OPC\OPCDA_Solution\HistorianService\bin\x86\Debug\HistorianService.exe
+Installing service OpcLogger...
+Service OpcLogger has been successfully installed.
+Creating EventLog source OpcLogger in log Application...
+Committing assembly 'D:\TECHGEL\OPC\OPCDA_Solution\HistorianService\bin\x86\Debug\HistorianService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\TECHGEL\OPC\OPCDA_Solution\HistorianService\bin\x86\Debug\HistorianService.InstallLog
+   assemblypath = D:\TECHGEL\OPC\OPCDA_Solution\HistorianService\bin\x86\Debug\HistorianService.exe
+Uninstalling assembly 'D:\TECHGEL\OPC\OPCDA_Solution\HistorianService\bin\x86\Debug\HistorianService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\TECHGEL\OPC\OPCDA_Solution\HistorianService\bin\x86\Debug\HistorianService.InstallLog
+   assemblypath = D:\TECHGEL\OPC\OPCDA_Solution\HistorianService\bin\x86\Debug\HistorianService.exe
+Removing EventLog source OpcLogger.
+Service OpcLogger is being removed from the system...
+Service OpcLogger was successfully removed from the system.

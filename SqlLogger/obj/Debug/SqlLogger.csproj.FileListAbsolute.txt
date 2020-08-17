@@ -1,0 +1,13 @@
+D:\TECHGEL\OPC\OPCDA_Solution\SqlLogger\bin\Debug\SqlLogger.dll.config
+D:\TECHGEL\OPC\OPCDA_Solution\SqlLogger\bin\Debug\SqlLogger.dll
+D:\TECHGEL\OPC\OPCDA_Solution\SqlLogger\bin\Debug\SqlLogger.pdb
+D:\TECHGEL\OPC\OPCDA_Solution\SqlLogger\bin\Debug\EntityFramework.dll
+D:\TECHGEL\OPC\OPCDA_Solution\SqlLogger\bin\Debug\EntityFramework.SqlServer.dll
+D:\TECHGEL\OPC\OPCDA_Solution\SqlLogger\bin\Debug\Newtonsoft.Json.dll
+D:\TECHGEL\OPC\OPCDA_Solution\SqlLogger\bin\Debug\EntityFramework.xml
+D:\TECHGEL\OPC\OPCDA_Solution\SqlLogger\bin\Debug\EntityFramework.SqlServer.xml
+D:\TECHGEL\OPC\OPCDA_Solution\SqlLogger\bin\Debug\Newtonsoft.Json.xml
+D:\TECHGEL\OPC\OPCDA_Solution\SqlLogger\obj\Debug\SqlLogger.csproj.CoreCompileInputs.cache
+D:\TECHGEL\OPC\OPCDA_Solution\SqlLogger\obj\Debug\SqlLogger.csproj.CopyComplete
+D:\TECHGEL\OPC\OPCDA_Solution\SqlLogger\obj\Debug\SqlLogger.dll
+D:\TECHGEL\OPC\OPCDA_Solution\SqlLogger\obj\Debug\SqlLogger.pdb
