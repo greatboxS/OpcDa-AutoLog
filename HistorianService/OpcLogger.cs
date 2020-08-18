@@ -19,13 +19,13 @@ namespace HistorianService
         public OpcLogger()
         {
             InitializeComponent();
-            service = new DataLogger.Services.LoggingServices();
         }
 
-        public DataLogger.Services.LoggingServices service;
         protected override void OnStart(string[] args)
         {
-            service = new DataLogger.Services.LoggingServices();
+            DebugLog.WriteOnStartStopLogFile(true);
+
+            DataLogger.Services.LoggingServices service = new DataLogger.Services.LoggingServices();
 
             string path = AppDomain.CurrentDomain.BaseDirectory;//Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
@@ -35,16 +35,18 @@ namespace HistorianService
                 service.ReadConfigurations(path);
 
                 service.RegistLoggingService();
+
+                DebugLog.WriteLine("Start services successfully");
             }
             catch(Exception ex)
             {
-                exce = ex.ToString();
+                DebugLog.WriteExceptionLogFile(ex.ToString());
             }
         }
 
         protected override void OnStop()
         {
-            
+            DebugLog.WriteOnStartStopLogFile(false);
         }
     }
 }

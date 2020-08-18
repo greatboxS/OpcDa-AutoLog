@@ -20,12 +20,13 @@ namespace AutoLoggingConsole
         static void Main(string[] args)
         {
             IntPtr handle = System.Diagnostics.Process.GetCurrentProcess().MainWindowHandle;
-            // Hide
-            //ShowWindow(handle, SW_HIDE);
+            bool hide = Properties.Settings.Default.HidenWindow;
+            if (hide)
+                ShowWindow(handle, SW_HIDE);
 
             DataLogger.Services.LoggingServices service = new DataLogger.Services.LoggingServices();
 
-            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            string path = AppDomain.CurrentDomain.BaseDirectory;
 
             Console.WriteLine("Start services");
             service.ReadConfigurations(path);

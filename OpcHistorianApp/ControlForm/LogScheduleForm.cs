@@ -1,5 +1,6 @@
 ﻿using DataLogger;
 using Microsoft.Office.Interop.Excel;
+using Newtonsoft.Json;
 using OPCDataAccess.Models;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,7 @@ namespace OpcHistorianApp.ControlForm
         private bool TestStarted = false;
         private Timer TestTimer;
         private TimeSpan TestTime;
+        private AboutForm AboutForm;
         public LogScheduleForm()
         {
             InitializeComponent();
@@ -121,6 +123,11 @@ namespace OpcHistorianApp.ControlForm
 
         private void SaveAsMenu_Click(object sender, EventArgs e)
         {
+            if(LoggingGroup.Count==0)
+            {
+              MessageBox.Show("Configuration is empty");
+                return;
+            }
             SaveAs();
         }
 
@@ -154,6 +161,11 @@ namespace OpcHistorianApp.ControlForm
             FilePath = saveFileDialog.FileName;
             FilePath = string.Format("{0}.xlsx", FilePath);
 
+            if (LoggingGroup.Count > 0)
+            { // save setting
+                Properties.Settings.Default.SqlSettingJson = JsonConvert.SerializeObject(LoggingGroup[0].SqlSetting);
+                Properties.Settings.Default.Save();
+            }
             if (!ExcelConfigFile.SaveAs(LoggingGroup, FilePath))
                 MessageBox.Show("Successfull");
             else
@@ -195,6 +207,7 @@ namespace OpcHistorianApp.ControlForm
                         }
                         catch (Exception ex)
                         {
+                            DebugLog.WriteExceptionLogFile(ex.ToString());
                             MessageBox.Show(ex.ToString());
                         }
                     }
@@ -206,6 +219,12 @@ namespace OpcHistorianApp.ControlForm
         {
             TestStarted = !TestStarted;
             TestingMode(TestStarted);
+        }
+
+        private void AboutMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutForm = new AboutForm();
+            AboutForm.ShowDialog();
         }
     }
 }

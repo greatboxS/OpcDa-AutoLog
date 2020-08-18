@@ -30,7 +30,7 @@ namespace DataLogger.Services
             {
                 if (s.IndexOf("xlsx") > -1)
                 {
-                    Console.WriteLine($"config file: {s}");
+                    DebugLog.WriteLine($"config file: {s}");
                     var group = ExcelHandle.ReadConfigFile(s);
 
                     if (group.Count != 0)
@@ -40,12 +40,15 @@ namespace DataLogger.Services
                             if (grp.TotalTag == 0) continue;
                             id++;
                             GlobalProvider.ConfigurationWrapper.Add(new ConfigurationWrapper(group, id));
-                            Console.WriteLine($"Add new file config, Id: {id}");
+                            DebugLog.WriteLine($"Add new file config, Id: {id}");
                         }
 
                     }
                 }
             }
+
+            if (GlobalProvider.ConfigurationWrapper.Count == 0)
+                ReadConfigurations(path);
 
             CheckSQlServerService();
         }
@@ -77,7 +80,7 @@ namespace DataLogger.Services
 
             }
 
-            Console.WriteLine($"OPCDA Server name: {serverName}");
+            DebugLog.WriteLine($"OPCDA Server name: {serverName}");
 
             if (serverName != string.Empty)
                 return TitaniumOpcDaControl.StartOpcDaServer(serverName);
@@ -121,22 +124,23 @@ namespace DataLogger.Services
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.ToString());
+                DebugLog.WriteExceptionLogFile(ex.ToString());
+                DebugLog.WriteLine(ex.ToString());
             }
 
             if (sqlSetting == null) return false;
 
             SqlLog = new CustomSqlLog(sqlSetting);
 
-            if (SqlLog.CreateDatabaseIfNotExist() != -1) Console.WriteLine("Success");
+            if (SqlLog.CreateDatabaseIfNotExist() != -1) DebugLog.WriteLine("Success");
 
             foreach (var tagGroup in SortedTag)
             {
                 var columnDefinitions = MappingItem.GetTableColumns(tagGroup.Value);
 
-                if (SqlLog.CreatTableIfNotExist(tagGroup.Key, columnDefinitions) != -1) Console.WriteLine("Success");
+                if (SqlLog.CreatTableIfNotExist(tagGroup.Key, columnDefinitions) != -1) DebugLog.WriteLine("Success");
 
-                if (SqlLog.AddColumnIfNotExist(tagGroup.Key, columnDefinitions) != -1) Console.WriteLine("Success");
+                if (SqlLog.AddColumnIfNotExist(tagGroup.Key, columnDefinitions) != -1) DebugLog.WriteLine("Success");
             }
 
             return true;
@@ -145,20 +149,20 @@ namespace DataLogger.Services
         public void RegistLoggingService()
         {
             if (StartConnectingToOpcDaServer())
-                Console.WriteLine("Connecting to OpcDa Server successfully");
+                DebugLog.WriteLine("Connecting to OpcDa Server successfully");
             else
             {
-                Console.WriteLine("Can not connect to OpcDa server");
+                DebugLog.WriteLine("Can not connect to OpcDa server");
                 return;
             }
 
-            Console.WriteLine($"Total group: {GlobalProvider.ConfigurationWrapper.Count}");
+            DebugLog.WriteLine($"Total group: {GlobalProvider.ConfigurationWrapper.Count}");
 
             foreach (var config in GlobalProvider.ConfigurationWrapper)
             {
                 foreach (var group in config.LoggingGroup)
                 {
-                    Console.WriteLine($"Registing new file configuration group, Id: {group.Id}");
+                    DebugLog.WriteLine($"Registing new file configuration group, Id: {group.Id}");
                     TitaniumOpcDaControl.CreateOpcDaGroup(group, true);
                 }
             }

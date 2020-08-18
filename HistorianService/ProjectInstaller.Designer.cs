@@ -33,7 +33,7 @@
             // 
             // Process
             // 
-            this.Process.Account = System.ServiceProcess.ServiceAccount.LocalService;
+            this.Process.Account = System.ServiceProcess.ServiceAccount.LocalSystem;
             this.Process.Password = null;
             this.Process.Username = null;
             // 
@@ -41,12 +41,13 @@
             // 
             this.Install.DisplayName = "OpcLogger";
             this.Install.ServiceName = "OpcLogger";
+            this.Install.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
             // 
             // ProjectInstaller
             // 
             this.Installers.AddRange(new System.Configuration.Install.Installer[] {
-            this.Process,
-            this.Install});
+            this.Install,
+            this.Process});
 
         }
 

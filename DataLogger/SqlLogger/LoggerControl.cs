@@ -15,7 +15,6 @@ namespace DataLogger
     public class LoggerControl
     {
         private string ConnectionString { get; set; }
-        private LoggerContext Context;
         private string DbTable = string.Empty;
         private string DataBase = string.Empty;
         private CustomSqlLog CustomSqlLog;

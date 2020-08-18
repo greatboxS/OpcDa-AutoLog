@@ -20,8 +20,9 @@ namespace DataLogger
             {
                 return CreateConfigFile(LoggingGroup, filePath);
             }
-            catch
+            catch (Exception ex)
             {
+                DebugLog.WriteExceptionLogFile(ex.ToString());
                 return true;
             }
         }
@@ -33,8 +34,9 @@ namespace DataLogger
             {
                 UpdateConfigFile(LoggingGroup, filePath);
             }
-            catch
+            catch (Exception ex)
             {
+                DebugLog.WriteExceptionLogFile(ex.ToString());
                 return true;
             }
             return false;
@@ -61,7 +63,11 @@ namespace DataLogger
                     excel.Save();
                 }
             }
-            catch { return true; }
+            catch (Exception ex)
+            {
+                DebugLog.WriteExceptionLogFile(ex.ToString());
+                return true;
+            }
 
             return false;
         }
@@ -88,7 +94,11 @@ namespace DataLogger
                     Excel.SaveAs(fileInfo);
                 }
             }
-            catch { return true; }
+            catch (Exception ex)
+            {
+                DebugLog.WriteExceptionLogFile(ex.ToString());
+                return true;
+            }
             return false;
         }
 
@@ -116,7 +126,7 @@ namespace DataLogger
             }
             catch (Exception ex)
             {
-                exp = ex.ToString();
+                DebugLog.WriteExceptionLogFile(ex.ToString());
             }
             return groups;
         }
@@ -192,7 +202,7 @@ namespace DataLogger
                 sheet.Cells["B4"].Value = group.SqlSetting.Table;
 
                 sheet.Cells["A5"].Value = "OpcDa Server";
-                sheet.Cells["D5"].Value = group.OPCServerName;
+                sheet.Cells["B5"].Value = group.OPCServerName;
 
                 sheet.Cells["A6"].Value = "Update Interval";
                 sheet.Cells["B6"].Value = group.IntervalUpdateTime;
@@ -225,8 +235,9 @@ namespace DataLogger
 
                 sheet.Cells[$"D2:E{i}"].Style.Border.BorderAround(OfficeOpenXml.Style.ExcelBorderStyle.Dashed);
             }
-            catch
+            catch (Exception ex)
             {
+                DebugLog.WriteExceptionLogFile(ex.ToString());
                 return true;
             }
             return false;

@@ -31,6 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.TopPanel = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtUpdateTime = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtOpcDaServer = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.DSSqlSetting = new System.Windows.Forms.BindingSource(this.components);
             this.label5 = new System.Windows.Forms.Label();
@@ -47,7 +51,6 @@
             this.TagList = new System.Windows.Forms.ListBox();
             this.DSTags = new System.Windows.Forms.BindingSource(this.components);
             this.BottomPanel = new System.Windows.Forms.Panel();
-            this.btnGroupSaveChange = new System.Windows.Forms.Button();
             this.GroupHeader = new System.Windows.Forms.Panel();
             this.txtGroup = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -59,7 +62,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DSSqlSetting)).BeginInit();
             this.GroupContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DSTags)).BeginInit();
-            this.BottomPanel.SuspendLayout();
             this.GroupHeader.SuspendLayout();
             this.TagListMenu.SuspendLayout();
             this.SuspendLayout();
@@ -70,11 +72,15 @@
             this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopPanel.Location = new System.Drawing.Point(5, 5);
             this.TopPanel.Name = "TopPanel";
-            this.TopPanel.Size = new System.Drawing.Size(261, 176);
+            this.TopPanel.Size = new System.Drawing.Size(261, 222);
             this.TopPanel.TabIndex = 0;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.txtUpdateTime);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.txtOpcDaServer);
             this.groupBox1.Controls.Add(this.checkBox1);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
@@ -89,10 +95,43 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(261, 176);
+            this.groupBox1.Size = new System.Drawing.Size(261, 222);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "SQL Server";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 199);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(67, 13);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Update time:";
+            // 
+            // txtUpdateTime
+            // 
+            this.txtUpdateTime.Location = new System.Drawing.Point(79, 195);
+            this.txtUpdateTime.Name = "txtUpdateTime";
+            this.txtUpdateTime.Size = new System.Drawing.Size(174, 20);
+            this.txtUpdateTime.TabIndex = 14;
+            this.txtUpdateTime.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUpdateTime_KeyPress);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 176);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(44, 13);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "OpcDa:";
+            // 
+            // txtOpcDaServer
+            // 
+            this.txtOpcDaServer.Location = new System.Drawing.Point(79, 172);
+            this.txtOpcDaServer.Name = "txtOpcDaServer";
+            this.txtOpcDaServer.Size = new System.Drawing.Size(174, 20);
+            this.txtOpcDaServer.TabIndex = 12;
             // 
             // checkBox1
             // 
@@ -105,6 +144,7 @@
             this.checkBox1.TabIndex = 10;
             this.checkBox1.Text = "Use login";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // DSSqlSetting
             // 
@@ -201,10 +241,10 @@
             this.GroupContainer.Controls.Add(this.BottomPanel);
             this.GroupContainer.Controls.Add(this.GroupHeader);
             this.GroupContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GroupContainer.Location = new System.Drawing.Point(5, 181);
+            this.GroupContainer.Location = new System.Drawing.Point(5, 227);
             this.GroupContainer.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.GroupContainer.Name = "GroupContainer";
-            this.GroupContainer.Size = new System.Drawing.Size(261, 355);
+            this.GroupContainer.Size = new System.Drawing.Size(261, 309);
             this.GroupContainer.TabIndex = 1;
             this.GroupContainer.TabStop = false;
             this.GroupContainer.Text = "Group Item config";
@@ -217,7 +257,7 @@
             this.TagList.FormattingEnabled = true;
             this.TagList.Location = new System.Drawing.Point(3, 48);
             this.TagList.Name = "TagList";
-            this.TagList.Size = new System.Drawing.Size(250, 279);
+            this.TagList.Size = new System.Drawing.Size(250, 248);
             this.TagList.TabIndex = 3;
             // 
             // DSTags
@@ -226,23 +266,11 @@
             // 
             // BottomPanel
             // 
-            this.BottomPanel.Controls.Add(this.btnGroupSaveChange);
             this.BottomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.BottomPanel.Location = new System.Drawing.Point(3, 327);
+            this.BottomPanel.Location = new System.Drawing.Point(3, 296);
             this.BottomPanel.Name = "BottomPanel";
-            this.BottomPanel.Size = new System.Drawing.Size(255, 25);
+            this.BottomPanel.Size = new System.Drawing.Size(255, 10);
             this.BottomPanel.TabIndex = 2;
-            // 
-            // btnGroupSaveChange
-            // 
-            this.btnGroupSaveChange.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnGroupSaveChange.Location = new System.Drawing.Point(0, 0);
-            this.btnGroupSaveChange.Name = "btnGroupSaveChange";
-            this.btnGroupSaveChange.Size = new System.Drawing.Size(96, 25);
-            this.btnGroupSaveChange.TabIndex = 0;
-            this.btnGroupSaveChange.Text = "Save changes";
-            this.btnGroupSaveChange.UseVisualStyleBackColor = true;
-            this.btnGroupSaveChange.Click += new System.EventHandler(this.btnGroupSaveChange_Click);
             // 
             // GroupHeader
             // 
@@ -310,7 +338,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DSSqlSetting)).EndInit();
             this.GroupContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DSTags)).EndInit();
-            this.BottomPanel.ResumeLayout(false);
             this.GroupHeader.ResumeLayout(false);
             this.GroupHeader.PerformLayout();
             this.TagListMenu.ResumeLayout(false);
@@ -338,12 +365,15 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Panel BottomPanel;
-        private System.Windows.Forms.Button btnGroupSaveChange;
         private System.Windows.Forms.BindingSource DSSqlSetting;
         private System.Windows.Forms.BindingSource DSTags;
         private System.Windows.Forms.ListBox TagList;
         private System.Windows.Forms.ContextMenuStrip TagListMenu;
         private System.Windows.Forms.ToolStripMenuItem DeleteMenu;
         private System.Windows.Forms.ToolStripMenuItem RestoreMenu;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtOpcDaServer;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtUpdateTime;
     }
 }

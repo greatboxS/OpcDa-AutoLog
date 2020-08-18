@@ -1,5 +1,6 @@
 ﻿using DataLogger;
 using DataLogger.SqlLogger;
+using Newtonsoft.Json;
 using OPCDataAccess.Controls;
 using OPCDataAccess.Models;
 using OpcHistorianApp.ControlForm;
@@ -194,11 +195,20 @@ namespace OpcHistorianApp
                     return;
             }
 
+            SqlSetting setting = new SqlSetting();
+            try
+            {
+                string settingJson = Properties.Settings.Default.SqlSettingJson;
+                setting = JsonConvert.DeserializeObject<SqlSetting>(settingJson);
+            }
+            catch { }
+
             var newGroup = new LoggingGroup
             {
                 OPCServerName = CurrentOpcDaServerName,
                 GroupName = "Group",
-                GroupTags = SelectedTag.ToList()
+                GroupTags = SelectedTag.ToList(),
+                SqlSetting = setting != null ? setting : new SqlSetting(),
             };
 
             EventControl.AddNewGroup(newGroup, true);
@@ -213,7 +223,7 @@ namespace OpcHistorianApp
         }
 
         private void NewConfigMenuItem_Click(object sender, EventArgs e)
-        { 
+        {
             this.LogScheduleForm = new LogScheduleForm();
             this.SchedulePanel.Controls.Clear();
             this.SchedulePanel.Controls.Add(LogScheduleForm);

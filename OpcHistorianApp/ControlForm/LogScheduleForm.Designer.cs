@@ -40,6 +40,7 @@
             this.SaveAsMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.TestConfigMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.StartTestMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.AboutMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TopPanel = new System.Windows.Forms.Panel();
             this.txtTestTime = new System.Windows.Forms.Label();
             this.lbBeginTime = new System.Windows.Forms.Label();
@@ -66,7 +67,7 @@
             this.TabControl.Location = new System.Drawing.Point(0, 0);
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
-            this.TabControl.Size = new System.Drawing.Size(308, 419);
+            this.TabControl.Size = new System.Drawing.Size(302, 419);
             this.TabControl.TabIndex = 0;
             // 
             // Group1
@@ -75,7 +76,7 @@
             this.Group1.Location = new System.Drawing.Point(4, 24);
             this.Group1.Name = "Group1";
             this.Group1.Padding = new System.Windows.Forms.Padding(3);
-            this.Group1.Size = new System.Drawing.Size(300, 391);
+            this.Group1.Size = new System.Drawing.Size(294, 391);
             this.Group1.TabIndex = 0;
             this.Group1.Text = "Group1";
             this.Group1.UseVisualStyleBackColor = true;
@@ -122,7 +123,7 @@
             this.fileToolStripMenuItem});
             this.ConfigMenu.Location = new System.Drawing.Point(0, 0);
             this.ConfigMenu.Name = "ConfigMenu";
-            this.ConfigMenu.Size = new System.Drawing.Size(126, 31);
+            this.ConfigMenu.Size = new System.Drawing.Size(43, 33);
             this.ConfigMenu.TabIndex = 1;
             this.ConfigMenu.Text = "menuStrip1";
             this.ConfigMenu.Click += new System.EventHandler(this.ConfigMenu_Click);
@@ -133,7 +134,8 @@
             this.NewMenu,
             this.OpenMenu,
             this.SaveAsMenu,
-            this.TestConfigMenu});
+            this.TestConfigMenu,
+            this.AboutMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
             this.fileToolStripMenuItem.Text = "File";
@@ -173,22 +175,29 @@
             this.StartTestMenu.Text = "Start testing";
             this.StartTestMenu.Click += new System.EventHandler(this.StartTestMenu_Click);
             // 
+            // AboutMenuItem
+            // 
+            this.AboutMenuItem.Name = "AboutMenuItem";
+            this.AboutMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.AboutMenuItem.Text = "About";
+            this.AboutMenuItem.Click += new System.EventHandler(this.AboutMenuItem_Click);
+            // 
             // TopPanel
             // 
             this.TopPanel.Controls.Add(this.txtTestTime);
             this.TopPanel.Controls.Add(this.lbBeginTime);
             this.TopPanel.Controls.Add(this.label3);
             this.TopPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.TopPanel.Location = new System.Drawing.Point(0, 450);
+            this.TopPanel.Location = new System.Drawing.Point(3, 455);
             this.TopPanel.Name = "TopPanel";
-            this.TopPanel.Size = new System.Drawing.Size(308, 37);
+            this.TopPanel.Size = new System.Drawing.Size(302, 29);
             this.TopPanel.TabIndex = 1;
             // 
             // txtTestTime
             // 
             this.txtTestTime.AutoSize = true;
             this.txtTestTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTestTime.Location = new System.Drawing.Point(158, 22);
+            this.txtTestTime.Location = new System.Drawing.Point(158, 16);
             this.txtTestTime.Name = "txtTestTime";
             this.txtTestTime.Size = new System.Drawing.Size(0, 12);
             this.txtTestTime.TabIndex = 1;
@@ -197,7 +206,7 @@
             // 
             this.lbBeginTime.AutoSize = true;
             this.lbBeginTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBeginTime.Location = new System.Drawing.Point(3, 22);
+            this.lbBeginTime.Location = new System.Drawing.Point(3, 16);
             this.lbBeginTime.Name = "lbBeginTime";
             this.lbBeginTime.Size = new System.Drawing.Size(0, 12);
             this.lbBeginTime.TabIndex = 0;
@@ -216,18 +225,18 @@
             this.HeaderPanel.Controls.Add(this.pictureBox1);
             this.HeaderPanel.Controls.Add(this.ConfigMenu);
             this.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.HeaderPanel.Location = new System.Drawing.Point(0, 0);
+            this.HeaderPanel.Location = new System.Drawing.Point(3, 3);
             this.HeaderPanel.Name = "HeaderPanel";
-            this.HeaderPanel.Size = new System.Drawing.Size(308, 31);
+            this.HeaderPanel.Size = new System.Drawing.Size(302, 33);
             this.HeaderPanel.TabIndex = 2;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::OpcHistorianApp.Properties.Resources.browser;
-            this.pictureBox1.Location = new System.Drawing.Point(126, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(43, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(182, 31);
+            this.pictureBox1.Size = new System.Drawing.Size(259, 33);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -236,9 +245,9 @@
             // 
             this.panel1.Controls.Add(this.TabControl);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 31);
+            this.panel1.Location = new System.Drawing.Point(3, 36);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(308, 419);
+            this.panel1.Size = new System.Drawing.Size(302, 419);
             this.panel1.TabIndex = 1;
             // 
             // LogScheduleForm
@@ -253,6 +262,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.ConfigMenu;
             this.Name = "LogScheduleForm";
+            this.Padding = new System.Windows.Forms.Padding(3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TabControl.ResumeLayout(false);
             this.Group1.ResumeLayout(false);
@@ -292,5 +302,6 @@
         private System.Windows.Forms.Label lbBeginTime;
         private System.Windows.Forms.ToolStripMenuItem StartTestMenu;
         private System.Windows.Forms.Label txtTestTime;
+        private System.Windows.Forms.ToolStripMenuItem AboutMenuItem;
     }
 }

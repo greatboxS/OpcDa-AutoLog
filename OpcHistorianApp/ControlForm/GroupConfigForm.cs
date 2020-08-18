@@ -40,6 +40,8 @@ namespace OpcHistorianApp.ControlForm
             DSTags.DataSource = CurrentGroup.GroupTags;
             txtGroup.Text = CurrentGroup.GroupName;
             this.TagList.ContextMenuStrip = TagListMenu;
+            txtOpcDaServer.Text = group.OPCServerName;
+            txtUpdateTime.Text = group.IntervalUpdateTime.ToString();
         }
 
         private void EventControl_UpdateTagListEvent(object sender, object userObject)
@@ -54,7 +56,8 @@ namespace OpcHistorianApp.ControlForm
                 RefreshTagListBox();
 
                 EventControl.SaveChanged(CurrentGroup);
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
 
             }
@@ -75,6 +78,7 @@ namespace OpcHistorianApp.ControlForm
             {
                 CurrentGroup.GroupTags.Remove((TagList.SelectedItem as TagProperty));
                 RefreshTagListBox();
+                EventControl.SaveChanged(CurrentGroup);
             }
         }
 
@@ -82,11 +86,26 @@ namespace OpcHistorianApp.ControlForm
         {
             CurrentGroup = BackupGroup;
             RefreshTagListBox();
+            EventControl.SaveChanged(CurrentGroup);
         }
 
         private void btnGroupSaveChange_Click(object sender, EventArgs e)
         {
             EventControl.SaveChanged(CurrentGroup);
+        }
+
+        private void txtUpdateTime_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !((char.IsDigit(e.KeyChar)) || (e.KeyChar == (char)Keys.Back));
+
+            int time = 0;
+            if (int.TryParse(txtUpdateTime.Text, out time))
+                CurrentGroup.IntervalUpdateTime = time;
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            CurrentGroup.SqlSetting.UseLogin = checkBox1.Checked;
         }
     }
 }

@@ -1,0 +1,5 @@
+11:43:27, 18/08/2020 ==> Log Message:
+System.InvalidOperationException: A worksheet with this name already exists in the workbook : Group#1
+   at OfficeOpenXml.ExcelWorksheets.AddSheet(String Name, Boolean isChart, Nullable`1 chartType, ExcelPivotTable pivotTableSource)
+   at OfficeOpenXml.ExcelWorksheets.Add(String Name)
+   at DataLogger.ExcelHandle.CreateConfigFile(IList`1 LoggingGroup, String filePath) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Excel\ExcelHandle.cs:line 90

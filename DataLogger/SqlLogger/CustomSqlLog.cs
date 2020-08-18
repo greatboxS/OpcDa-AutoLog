@@ -64,9 +64,9 @@ namespace DataLogger.SqlLogger
             foreach (var c in columns)
             {
                 string cmd = SqlCmdBuilder.AddColumnIfNotExistCmd(table, c);
-                return SqlExcuteNonQuery(connectionString, cmd);
+                SqlExcuteNonQuery(connectionString, cmd);
             }
-            return -1;
+            return 1;
         }
     }
 }

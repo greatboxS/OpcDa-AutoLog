@@ -43,6 +43,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MainWindowsMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.NewConfigMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddGroupMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.SelectAllMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.UnSelectAllMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,7 +52,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.MainLeftPanel = new System.Windows.Forms.Panel();
             this.NewConfigMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.NewConfigMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.LeftPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -125,32 +125,31 @@
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainPanel.Location = new System.Drawing.Point(0, 0);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Padding = new System.Windows.Forms.Padding(3);
-            this.MainPanel.Size = new System.Drawing.Size(615, 561);
+            this.MainPanel.Padding = new System.Windows.Forms.Padding(3, 3, 0, 3);
+            this.MainPanel.Size = new System.Drawing.Size(622, 561);
             this.MainPanel.TabIndex = 1;
             // 
             // panel3
             // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.GroupConfigPanel);
             this.panel3.Controls.Add(this.ItemPropertyPanel);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(205, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(405, 553);
+            this.panel3.Padding = new System.Windows.Forms.Padding(3);
+            this.panel3.Size = new System.Drawing.Size(415, 553);
             this.panel3.TabIndex = 3;
             // 
             // GroupConfigPanel
             // 
-            this.GroupConfigPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.GroupConfigPanel.Controls.Add(this.lbTotalSelectedTag);
             this.GroupConfigPanel.Controls.Add(this.label1);
             this.GroupConfigPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.GroupConfigPanel.Location = new System.Drawing.Point(0, 523);
+            this.GroupConfigPanel.Location = new System.Drawing.Point(3, 521);
             this.GroupConfigPanel.Name = "GroupConfigPanel";
             this.GroupConfigPanel.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.GroupConfigPanel.Size = new System.Drawing.Size(401, 26);
+            this.GroupConfigPanel.Size = new System.Drawing.Size(409, 29);
             this.GroupConfigPanel.TabIndex = 1;
             // 
             // lbTotalSelectedTag
@@ -175,25 +174,25 @@
             // 
             this.ItemPropertyPanel.AutoScroll = true;
             this.ItemPropertyPanel.AutoSize = true;
-            this.ItemPropertyPanel.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.ItemPropertyPanel.BackColor = System.Drawing.Color.White;
             this.ItemPropertyPanel.ColumnCount = 1;
             this.ItemPropertyPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.ItemPropertyPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ItemPropertyPanel.Location = new System.Drawing.Point(0, 33);
+            this.ItemPropertyPanel.Location = new System.Drawing.Point(3, 36);
             this.ItemPropertyPanel.Name = "ItemPropertyPanel";
             this.ItemPropertyPanel.RowCount = 2;
             this.ItemPropertyPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.ItemPropertyPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.ItemPropertyPanel.Size = new System.Drawing.Size(401, 516);
+            this.ItemPropertyPanel.Size = new System.Drawing.Size(409, 514);
             this.ItemPropertyPanel.TabIndex = 2;
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Location = new System.Drawing.Point(3, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(401, 33);
+            this.panel4.Size = new System.Drawing.Size(409, 33);
             this.panel4.TabIndex = 0;
             // 
             // pictureBox1
@@ -202,7 +201,7 @@
             this.pictureBox1.Image = global::OpcHistorianApp.Properties.Resources.internet;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(401, 33);
+            this.pictureBox1.Size = new System.Drawing.Size(409, 33);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -216,28 +215,35 @@
             this.UnSelectAllMenuItem,
             this.InsertMenuItem});
             this.MainWindowsMenu.Name = "MainWindowsMenu";
-            this.MainWindowsMenu.Size = new System.Drawing.Size(181, 136);
+            this.MainWindowsMenu.Size = new System.Drawing.Size(176, 114);
             this.MainWindowsMenu.Opening += new System.ComponentModel.CancelEventHandler(this.MainWindowsMenu_Opening);
+            // 
+            // NewConfigMenuItem
+            // 
+            this.NewConfigMenuItem.Name = "NewConfigMenuItem";
+            this.NewConfigMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.NewConfigMenuItem.Text = "New Configuration";
+            this.NewConfigMenuItem.Click += new System.EventHandler(this.NewConfigMenuItem_Click);
             // 
             // AddGroupMenu
             // 
             this.AddGroupMenu.Enabled = false;
             this.AddGroupMenu.Name = "AddGroupMenu";
-            this.AddGroupMenu.Size = new System.Drawing.Size(180, 22);
+            this.AddGroupMenu.Size = new System.Drawing.Size(175, 22);
             this.AddGroupMenu.Text = "New Group";
             this.AddGroupMenu.Click += new System.EventHandler(this.NewGroupMenuItem_Click);
             // 
             // SelectAllMenuItem
             // 
             this.SelectAllMenuItem.Name = "SelectAllMenuItem";
-            this.SelectAllMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.SelectAllMenuItem.Size = new System.Drawing.Size(175, 22);
             this.SelectAllMenuItem.Text = "Select all";
             this.SelectAllMenuItem.Click += new System.EventHandler(this.SelectAllMenuItem_Click);
             // 
             // UnSelectAllMenuItem
             // 
             this.UnSelectAllMenuItem.Name = "UnSelectAllMenuItem";
-            this.UnSelectAllMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.UnSelectAllMenuItem.Size = new System.Drawing.Size(175, 22);
             this.UnSelectAllMenuItem.Text = "UnSelect all";
             this.UnSelectAllMenuItem.Click += new System.EventHandler(this.UnSelectAllMenuItem_Click);
             // 
@@ -245,16 +251,17 @@
             // 
             this.InsertMenuItem.Enabled = false;
             this.InsertMenuItem.Name = "InsertMenuItem";
-            this.InsertMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.InsertMenuItem.Size = new System.Drawing.Size(175, 22);
             this.InsertMenuItem.Text = "Insert to";
             // 
             // SchedulePanel
             // 
+            this.SchedulePanel.BackColor = System.Drawing.Color.White;
             this.SchedulePanel.Controls.Add(this.label3);
             this.SchedulePanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SchedulePanel.Location = new System.Drawing.Point(620, 0);
+            this.SchedulePanel.Location = new System.Drawing.Point(622, 0);
             this.SchedulePanel.Name = "SchedulePanel";
-            this.SchedulePanel.Size = new System.Drawing.Size(324, 561);
+            this.SchedulePanel.Size = new System.Drawing.Size(322, 561);
             this.SchedulePanel.TabIndex = 0;
             // 
             // label3
@@ -273,8 +280,7 @@
             this.MainLeftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.MainLeftPanel.Location = new System.Drawing.Point(0, 0);
             this.MainLeftPanel.Name = "MainLeftPanel";
-            this.MainLeftPanel.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.MainLeftPanel.Size = new System.Drawing.Size(620, 561);
+            this.MainLeftPanel.Size = new System.Drawing.Size(622, 561);
             this.MainLeftPanel.TabIndex = 0;
             // 
             // NewConfigMenu
@@ -282,13 +288,6 @@
             this.NewConfigMenu.Name = "NewConfigMenu";
             this.NewConfigMenu.Size = new System.Drawing.Size(180, 22);
             this.NewConfigMenu.Text = "New Configuration";
-            // 
-            // NewConfigMenuItem
-            // 
-            this.NewConfigMenuItem.Name = "NewConfigMenuItem";
-            this.NewConfigMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.NewConfigMenuItem.Text = "New Configuration";
-            this.NewConfigMenuItem.Click += new System.EventHandler(this.NewConfigMenuItem_Click);
             // 
             // MainWindow
             // 

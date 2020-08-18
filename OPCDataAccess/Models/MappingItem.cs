@@ -23,7 +23,6 @@ namespace OPCDataAccess.Models
                 {
                     ItemId = itemProp.Name,
                     IsActive = true,
-                    RequestedDataType = typeof(int),
                 });
             }
 

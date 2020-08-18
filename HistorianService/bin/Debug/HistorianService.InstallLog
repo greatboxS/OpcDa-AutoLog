@@ -1716,3 +1716,82 @@ Removing EventLog source OpcLogger.
 Service OpcLogger is being removed from the system...
 Service OpcLogger was successfully removed from the system.
 Attempt to stop service OpcLogger.
+Installing assembly 'D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\HistorianService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\HistorianService.exe
+   logfile = D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\HistorianService.InstallLog
+Installing service OpcLogger...
+Service OpcLogger has been successfully installed.
+Creating EventLog source OpcLogger in log Application...
+Committing assembly 'D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\HistorianService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\HistorianService.exe
+   logfile = D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\HistorianService.InstallLog
+Uninstalling assembly 'D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\HistorianService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\HistorianService.exe
+   logfile = D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\HistorianService.InstallLog
+Removing EventLog source OpcLogger.
+Service OpcLogger is being removed from the system...
+Service OpcLogger was successfully removed from the system.
+Attempt to stop service OpcLogger.
+Installing assembly 'D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\HistorianService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\HistorianService.exe
+   logfile = D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\HistorianService.InstallLog
+Installing service OpcLogger...
+Service OpcLogger has been successfully installed.
+Creating EventLog source OpcLogger in log Application...
+Committing assembly 'D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\HistorianService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\HistorianService.exe
+   logfile = D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\HistorianService.InstallLog
+Uninstalling assembly 'D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\HistorianService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\HistorianService.exe
+   logfile = D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\HistorianService.InstallLog
+Removing EventLog source OpcLogger.
+Service OpcLogger is being removed from the system...
+Service OpcLogger was successfully removed from the system.
+Attempt to stop service OpcLogger.
+Installing assembly 'D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\HistorianService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\HistorianService.exe
+   logfile = D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\HistorianService.InstallLog
+Installing service OpcLogger...
+Service OpcLogger has been successfully installed.
+Creating EventLog source OpcLogger in log Application...
+Committing assembly 'D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\HistorianService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\HistorianService.exe
+   logfile = D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\HistorianService.InstallLog
+Uninstalling assembly 'D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\HistorianService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\HistorianService.exe
+   logfile = D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\HistorianService.InstallLog
+Removing EventLog source OpcLogger.
+Service OpcLogger is being removed from the system...
+Service OpcLogger was successfully removed from the system.
+Attempt to stop service OpcLogger.
+Installing assembly 'D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\HistorianService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\HistorianService.exe
+   logfile = D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\HistorianService.InstallLog
+Installing service OpcLogger...
+Service OpcLogger has been successfully installed.
+Creating EventLog source OpcLogger in log Application...
+Committing assembly 'D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\HistorianService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\HistorianService.exe
+   logfile = D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\HistorianService.InstallLog

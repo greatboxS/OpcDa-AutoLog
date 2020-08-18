@@ -90,6 +90,7 @@
   <ItemGroup>
     <Compile Include="Excel\ExcelHandle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\DebugLog.cs" />
     <Compile Include="Services\LoggingServices.cs" />
     <Compile Include="SqlLogger\CustomSqlLog.cs" />
     <Compile Include="SqlLogger\LoggerContext.cs" />

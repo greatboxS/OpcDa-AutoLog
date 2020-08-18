@@ -98,7 +98,7 @@ namespace DataLogger
 
             var GroupItems = MappingItem.GetOpcDaItemDefinition(LoggingGroup);
 
-            group.AddItems(GroupItems);
+            var result = group.AddItems(GroupItems);
 
             if (active)
             {
@@ -146,14 +146,18 @@ namespace DataLogger
             try
             {
                 var wrapper = state as OpcDaGroupWrapper;
-                Console.WriteLine($"From Group Id {wrapper.Id}");
-                wrapper.OpcDaItemValues = new List<OpcDaItemValue>(wrapper.Group.Read(wrapper.Group.Items, OpcDaDataSource.Cache));
+                DebugLog.WriteLine($"From Group Id {wrapper.Id}");
+                var result = wrapper.Group.Read(wrapper.Group.Items, OpcDaDataSource.Cache);
+                wrapper.OpcDaItemValues = new List<OpcDaItemValue>(result);
                 if (wrapper.WriteLog() == -1)
-                    Console.WriteLine("Log error");
+                    DebugLog.WriteLine("Log error");
                 else
-                    Console.WriteLine("Log success");
+                    DebugLog.WriteLine("Log success");
             }
-            catch { }
+            catch (Exception ex)
+            {
+                DebugLog.WriteLine(ex.ToString());
+            }
         }
 
         public static IList<OpcServerDescription> GetOpcDaServer()
