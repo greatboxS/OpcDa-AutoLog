@@ -3,14 +3,17 @@ using OPCDataAccess.Models;
 using OPCDataAccess.OpcException;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Security.Permissions;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using TitaniumAS.Opc.Client.Da;
 
 namespace DataLogger.Services
 {
@@ -26,6 +29,7 @@ namespace DataLogger.Services
             string[] files = Directory.GetFiles(configPath);
 
             int id = 0;
+            int groupId = 0;
             foreach (string s in files)
             {
                 if (s.IndexOf("xlsx") > -1)
@@ -35,14 +39,19 @@ namespace DataLogger.Services
 
                     if (group.Count != 0)
                     {
+                        List<LoggingGroup> addList = new List<LoggingGroup>();
                         foreach (var grp in group)
                         {
                             if (grp.TotalTag == 0) continue;
-                            id++;
-                            GlobalProvider.ConfigurationWrapper.Add(new ConfigurationWrapper(group, id));
-                            DebugLog.WriteLine($"Add new file config, Id: {id}");
+
+                            groupId++;
+                            grp.Id = groupId;
+                            addList.Add(grp);
                         }
 
+                        id++;
+                        DebugLog.WriteLine($"Add new file config, Id: {id}");
+                        GlobalProvider.ConfigurationWrapper.Add(new ConfigurationWrapper(group, id));
                     }
                 }
             }
@@ -167,6 +176,97 @@ namespace DataLogger.Services
                 }
             }
         }
+
+        public void StartLogging(LogType logType = LogType.CIRCLE_TIME)
+        {
+            foreach (var item in TitaniumOpcDaControl.OpcDaWrappers)
+            {
+                item.Group.Destroyed += Group_Destroyed;
+
+                if (logType == LogType.VALUE_CHANGED_EVENT)
+                {
+                    item.Group.ValuesChanged += Group_ValuesChanged;
+                }
+                else
+                {
+                    System.Threading.Timer CircleTimer = new System.Threading.Timer(CirleTimer_Elapsed, item, 0, item.LoggingGroup.IntervalUpdateTime);
+                    item.Timer = CircleTimer;
+                }
+            }
+        }
+
+        private void CirleTimer_Elapsed(object state)
+        {
+            try
+            {
+                var wrapper = state as OpcDaGroupWrapper;
+
+                HandleLogging(wrapper);
+            }
+            catch (Exception ex)
+            {
+                DebugLog.WriteLine(ex.ToString());
+            }
+        }
+
+        private void Group_Destroyed(object sender, EventArgs e)
+        {
+            DebugLog.WriteLine($"Group {(sender as OpcDaGroup).Name}");
+        }
+
+        private void Group_ValuesChanged(object sender, OpcDaItemValuesChangedEventArgs e)
+        {
+            var group = sender as OpcDaGroup;
+
+            foreach (var item in TitaniumOpcDaControl.OpcDaWrappers)
+            {
+                if (group.Name == item.Group.Name)
+                {
+                    HandleLogging(item);
+                }
+            }
+        }
+
+        private void HandleLogging(OpcDaGroupWrapper wrapper)
+        {
+            try
+            {
+                if (TitaniumOpcDaControl.OpcDaServer.IsConnected)
+                    DebugLog.WriteLine("Server is connected");
+                else
+                {
+                    TitaniumOpcDaControl.StartOpcDaServer(TitaniumOpcDaControl.ServerName, true);
+                    DebugLog.WriteLine("Server is disconnected");
+                }
+
+                DebugLog.WriteLine($"Connect: {wrapper.Group.Server.IsConnected}");
+                DebugLog.WriteLine($"From Group Id {wrapper.LoggingGroup.Id}");
+
+                var result = wrapper.Group.Read(wrapper.Group.Items, OpcDaDataSource.Cache);
+
+                wrapper.OpcDaItemValues = new List<OpcDaItemValue>(result);
+                if (wrapper.WriteLog() == -1)
+                {
+                    DebugLog.WriteLine("Log error");
+                    DebugLog.WriteStatictis(true);
+                }
+                else
+                {
+                    DebugLog.WriteLine("Log success");
+                    DebugLog.WriteStatictis(false);
+                }
+            }
+            catch (Exception ex)
+            {
+                DebugLog.WriteLine(ex.ToString());
+            }
+        }
+
+        public enum LogType
+        {
+            CIRCLE_TIME,
+            VALUE_CHANGED_EVENT,
+        }
     }
 
     public class GlobalProvider
@@ -187,10 +287,12 @@ namespace DataLogger.Services
                 LoggingGroup = new List<LoggingGroup>(group);
         }
 
-        public ConfigurationWrapper(IList<LoggingGroup> group, int Id)
+        public ConfigurationWrapper(IList<LoggingGroup> group, int id)
         {
             if (group != null)
                 LoggingGroup = new List<LoggingGroup>(group);
+
+            Id = id;
         }
 
         public int Id { get; set; }

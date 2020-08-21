@@ -17,12 +17,18 @@ namespace DataLogger
         public IList<OpcDaItemValue> OpcDaItemValues { get; set; }
         public LoggerControl LoggerControl { get; set; }
         public LoggingGroup LoggingGroup { get; set; }
-        public OpcDaGroupWrapper(OpcDaGroup OpcDaGroup, LoggingGroup loggingGroup)
+        public OpcDaGroupWrapper( OpcDaGroup OpcDaGroup, LoggingGroup loggingGroup)
         {
             OpcDaItemValues = new List<OpcDaItemValue>();
             Group = OpcDaGroup;
             LoggingGroup = loggingGroup;
             LoggerControl = new LoggerControl(LoggingGroup.SqlSetting);
+
+            var columnDefinitions = MappingItem.GetTableColumns(LoggingGroup.GroupTags);
+            SqlLogger.CustomSqlLog SqlLog = new SqlLogger.CustomSqlLog(LoggingGroup.SqlSetting);
+
+            if (SqlLog.AddColumnIfNotExist(LoggingGroup.SqlSetting.Table, columnDefinitions) != -1)
+                Console.WriteLine("Success");
         }
 
         public int WriteLog()

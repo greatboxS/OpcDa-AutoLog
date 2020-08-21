@@ -66,10 +66,6 @@ D:\1_Work\TECHGEL\OPC\OPCDA_Solution\HistorianService\obj\Debug\HistorianService
 D:\1_Work\TECHGEL\OPC\OPCDA_Solution\HistorianService\obj\Debug\HistorianService.csproj.CopyComplete
 D:\1_Work\TECHGEL\OPC\OPCDA_Solution\HistorianService\obj\Debug\HistorianService.exe
 D:\1_Work\TECHGEL\OPC\OPCDA_Solution\HistorianService\obj\Debug\HistorianService.pdb
-D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\obj\Debug\HistorianService.csprojAssemblyReference.cache
-D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\obj\Debug\HistorianService.ProjectInstaller.resources
-D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\obj\Debug\HistorianService.csproj.GenerateResource.cache
-D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\obj\Debug\HistorianService.csproj.CoreCompileInputs.cache
 D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\HistorianService.exe.config
 D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\HistorianService.exe
 D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\HistorianService.pdb
@@ -97,6 +93,10 @@ D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bi
 D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\EntityFramework.SqlServer.xml
 D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\Newtonsoft.Json.xml
 D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\EPPlus.xml
+D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\obj\Debug\HistorianService.csprojAssemblyReference.cache
+D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\obj\Debug\HistorianService.ProjectInstaller.resources
+D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\obj\Debug\HistorianService.csproj.GenerateResource.cache
+D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\obj\Debug\HistorianService.csproj.CoreCompileInputs.cache
 D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\obj\Debug\HistorianService.csproj.CopyComplete
 D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\obj\Debug\HistorianService.exe
 D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\obj\Debug\HistorianService.pdb

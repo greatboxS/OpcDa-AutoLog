@@ -1,5 +1,7 @@
-﻿using System;
+﻿using DataLogger;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -19,7 +21,7 @@ namespace AutoLoggingConsole
         const int SW_SHOW = 5;
         static void Main(string[] args)
         {
-            IntPtr handle = System.Diagnostics.Process.GetCurrentProcess().MainWindowHandle;
+            IntPtr handle = Process.GetCurrentProcess().MainWindowHandle;
             bool hide = Properties.Settings.Default.HidenWindow;
             if (hide)
                 ShowWindow(handle, SW_HIDE);
@@ -28,11 +30,14 @@ namespace AutoLoggingConsole
 
             string path = AppDomain.CurrentDomain.BaseDirectory;
 
-            Console.WriteLine("Start services");
+            DebugLog.WriteLine("Read configurations");
             service.ReadConfigurations(path);
 
-            Console.WriteLine("Start services");
+            DebugLog.WriteLine("Regist services");
             service.RegistLoggingService();
+
+            DebugLog.WriteLine("Start services");
+            service.StartLogging();
 
             Console.ReadLine();
         }

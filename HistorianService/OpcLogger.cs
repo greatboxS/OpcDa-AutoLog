@@ -32,11 +32,14 @@ namespace HistorianService
             string exce = string.Empty;
             try
             {
+                DebugLog.WriteLine("Read configurations");
                 service.ReadConfigurations(path);
 
+                DebugLog.WriteLine("Regist services");
                 service.RegistLoggingService();
 
-                DebugLog.WriteLine("Start services successfully");
+                DebugLog.WriteLine("Start services");
+                service.StartLogging();
             }
             catch(Exception ex)
             {

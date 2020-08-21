@@ -175,7 +175,7 @@ namespace DataLogger
             {
                 sheet.Column(1).Width = 20;
                 sheet.Column(2).Width = 40;
-                sheet.Column(3).Width = 45;
+                sheet.Column(3).Width = 10;
                 sheet.Column(4).Width = 45;
                 sheet.Column(5).Width = 15;
 

@@ -8,9 +8,11 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Security.Cryptography.Pkcs;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Media;
 using TitaniumAS;
 using TitaniumAS.Opc.Client.Common;
 using TitaniumAS.Opc.Client.Da;
@@ -22,18 +24,18 @@ namespace DataLogger
     public class TitaniumOpcDaControl
     {
         public static OpcDaServer OpcDaServer;
-        private static string ServerName = string.Empty;
+        public static string ServerName = string.Empty;
         public static IList<OpcDaGroupWrapper> OpcDaWrappers = new List<OpcDaGroupWrapper>();
-        private static List<OpcDaBrowseElement> Items = new List<OpcDaBrowseElement>();
 
-        public static bool StartOpcDaServer(string server)
+        public static bool StartOpcDaServer(string server, bool reconnect = false)
         {
-            OpcDaWrappers = new List<OpcDaGroupWrapper>();
+            //OpcDaWrappers = new List<OpcDaGroupWrapper>();
             try
             {
                 if (server != ServerName)
                     ServerName = server;
-                OpcDaServer = new OpcDaServer(UrlBuilder.Build(server));
+                if (!reconnect)
+                    OpcDaServer = new OpcDaServer(UrlBuilder.Build(server, "localhost"));
                 OpcDaServer.Connect();
             }
             catch (Exception ex)
@@ -69,29 +71,11 @@ namespace DataLogger
         {
             if (!OpcDaClientConnected())
                 return null;
-            //throw new OpcDaQueryException(OpcDaException.SERVER_HAS_NOT_CONNECTED_YET, "OpcDa has not created yet");
 
-            var gsearch = OpcDaServer.Groups.Where(i => i.Name == LoggingGroup.GroupName);
-
-
-            Console.WriteLine("CreateOpcDaGroup: Start registing");
-
-            if (gsearch.Count() > 0)
-            {
-                Console.WriteLine("CreateOpcDaGroup: Group name is existing");
-
-                var removeGroup = gsearch.ToList();
-                foreach (var rm in removeGroup)
-                {
-                    LoggingGroup.GroupName = Guid.NewGuid().ToString();
-                    Console.WriteLine("CreateOpcDaGroup: Generating new Group name");
-                }
-            }
-
-            var group = OpcDaServer.AddGroup(LoggingGroup.GroupName);
+            var group = OpcDaServer.AddGroup(Guid.NewGuid().ToString());
 
             group.IsActive = true;
-
+            group.KeepAlive = Timeout.InfiniteTimeSpan;
             group.UpdateRate = TimeSpan.FromMilliseconds(updateTime);
 
             Console.WriteLine("CreateOpcDaGroup: Add group successfuly");
@@ -103,24 +87,43 @@ namespace DataLogger
             if (active)
             {
                 OpcDaGroupWrapper groupWrapper = new OpcDaGroupWrapper(group, LoggingGroup);
-
-                groupWrapper.Id = LoggingGroup.Id;
-
-                Timer Timer = new Timer(GroupTimerCallback, groupWrapper, 0, LoggingGroup.IntervalUpdateTime);
-
-                groupWrapper.Timer = Timer;
-
                 OpcDaWrappers.Add(groupWrapper);
-
-                var columnDefinitions = MappingItem.GetTableColumns(LoggingGroup.GroupTags);
-
-                CustomSqlLog SqlLog = new CustomSqlLog(LoggingGroup.SqlSetting);
-
-                if (SqlLog.AddColumnIfNotExist(LoggingGroup.SqlSetting.Table, columnDefinitions) != -1) Console.WriteLine("Success");
-
-                Console.WriteLine("CreateOpcDaGroup: Group is active now");
+                DebugLog.WriteLine($"Group {group.Name} is activated");
             }
             return group;
+        }
+
+        private static OpcDaGroup ReNewGroup(object obj)
+        {
+            var group = (obj as OpcDaGroup);
+
+            var gsearch = OpcDaServer.Groups.Where(i => i.Name == group.Name);
+
+            Console.WriteLine("CreateOpcDaGroup: Start registing");
+
+            if (gsearch.Count() > 0)
+            {
+                Console.WriteLine("CreateOpcDaGroup: Group name is existing");
+
+                var removeGroup = gsearch.ToList();
+                foreach (var rm in removeGroup)
+                {
+                    OpcDaServer.RemoveGroup(rm);
+                    Console.WriteLine("CreateOpcDaGroup: Generating new Group name");
+                }
+            }
+
+            List<OpcDaItemDefinition> items = new List<OpcDaItemDefinition>();
+            foreach (var item in group.Items)
+            {
+                items.Add(new OpcDaItemDefinition { ItemId = item.ItemId, IsActive=true });
+            }
+
+            var newgroup = OpcDaServer.AddGroup(Guid.NewGuid().ToString());
+
+            newgroup.AddItems(items);
+
+            return newgroup;
         }
 
         public static OpcDaGroup CreateOpcDaGroup(OpcDaServer server, IList<OpcDaBrowseElement> elements)
@@ -141,30 +144,11 @@ namespace DataLogger
             return group;
         }
 
-        private static void GroupTimerCallback(object state)
-        {
-            try
-            {
-                var wrapper = state as OpcDaGroupWrapper;
-                DebugLog.WriteLine($"From Group Id {wrapper.Id}");
-                var result = wrapper.Group.Read(wrapper.Group.Items, OpcDaDataSource.Cache);
-                wrapper.OpcDaItemValues = new List<OpcDaItemValue>(result);
-                if (wrapper.WriteLog() == -1)
-                    DebugLog.WriteLine("Log error");
-                else
-                    DebugLog.WriteLine("Log success");
-            }
-            catch (Exception ex)
-            {
-                DebugLog.WriteLine(ex.ToString());
-            }
-        }
-
         public static IList<OpcServerDescription> GetOpcDaServer()
         {
             List<string> servers = new List<string>();
             var enumerator = new OpcServerEnumeratorAuto();
-            var serverDescriptions = enumerator.Enumerate("", OpcServerCategory.OpcDaServers);
+            var serverDescriptions = enumerator.Enumerate("localhost", OpcServerCategory.OpcDaServer30);
             return new List<OpcServerDescription>(serverDescriptions);
         }
 
@@ -197,15 +181,20 @@ namespace DataLogger
             OpcDaServer.Connect();
             var opcBrowser = new OpcDaBrowser1(OpcDaServer);
 
-            List<TagProperty> TagProps = new List<TagProperty>();
+            var elements = opcBrowser.GetElements("");
 
-            var list = GetElements(OpcDaServer, opcBrowser);
+            List<OpcDaBrowseElement> tags = new List<OpcDaBrowseElement>();
 
-            var group = CreateOpcDaGroup(OpcDaServer, list);
+            foreach (var element in elements)
+            {
+                GetTag(opcBrowser, element, tags);
+            }    
+
+            var group = CreateOpcDaGroup(OpcDaServer, tags);
 
             if (group == null) return null;
 
-            var result = ValidatingTag(group, list);
+            var result = ValidatingTag(group, tags);
 
             OpcDaServer.RemoveGroup(group);
 
@@ -214,79 +203,42 @@ namespace DataLogger
             return result;
         }
 
-        /// <summary>
-        /// Get all item properties
-        /// </summary>
-        /// <param name="elementId"></param>
-        /// <param name="opcBrowser"></param>
-        /// <returns></returns>
-        public static IList<OpcDaBrowseElement> GetElements(OpcDaServer server, OpcDaBrowser1 opcBrowser, string elementId = "")
+        private static void GetTag(OpcDaBrowser1 browser, OpcDaBrowseElement element, List<OpcDaBrowseElement> items)
         {
-            Items = new List<OpcDaBrowseElement>();
             try
             {
-                var branches = opcBrowser.GetElements(elementId); // Expand root
-
-                if (branches == null)
-                    return Items;
-
-                ElementBrowser(server, opcBrowser, branches, elementId);
-            }
-            catch { }
-
-            return Items;
-        }
-
-        /// <summary>
-        /// Get item properties in loop
-        /// </summary>
-        /// <param name="elementId"></param>
-        /// <param name="opcBrowser"></param>
-        /// <param name="elements"></param>
-        private static void ElementBrowser(OpcDaServer server, OpcDaBrowser1 opcBrowser, OpcDaBrowseElement[] elements, string elementId = "")
-        {
-            foreach (var opcDaBrowseElement in elements)
-            {
-                if (opcDaBrowseElement.HasChildren)
+                if(element.HasChildren)
                 {
-                    try
-                    {
-                        var branchs = opcBrowser.GetElements(opcDaBrowseElement.ItemId); // Expand root
+                    var opcBrowser = new OpcDaBrowser1(OpcDaServer);
+                    var elements  = browser.GetElements(element.ItemId);
 
-                        ElementBrowser(server, opcBrowser, branchs, opcDaBrowseElement.ItemId);
-                    }
-                    catch
+                    foreach (var item in elements)
                     {
+                        GetTag(browser, item, items);
+                    }
+                }
+                else
+                {
+                    if (element.ItemId == null) return;
+
+                    if (element.ItemId.IndexOf("Receive") > -1 ||
+                        element.ItemId.IndexOf("Connected") > -1 ||
+                        element.ItemId.IndexOf("Transmit") > -1)
                         return;
-                    }
+
+                    OpcDaBrowser3 properties = new OpcDaBrowser3(OpcDaServer);
+
+                    if (properties == null) throw new OpcDaQueryException(OpcDaException.GET_CLIENT_GROUP_ITEM_ERROR, "");
+
+                    var prop = properties.GetProperties(new string[] { element.ItemId }, new OpcDaPropertiesQuery(false));
+
+                    element.ItemProperties.Properties = prop[0].Properties;
+
+                    items.Add(element);
                 }
-                else if (opcDaBrowseElement.IsItem)
-                {
-                    try
-                    {
-
-                        if (opcDaBrowseElement.ItemId == null) continue;
-
-                        if (opcDaBrowseElement.ItemId.IndexOf("Receive") > -1 ||
-                            opcDaBrowseElement.ItemId.IndexOf("Connected") > -1 ||
-                            opcDaBrowseElement.ItemId.IndexOf("Transmit") > -1)
-                            continue;
-
-                        OpcDaBrowser3 properties = new OpcDaBrowser3(server);
-
-                        if (properties == null) throw new OpcDaQueryException(OpcDaException.GET_CLIENT_GROUP_ITEM_ERROR, "");
-
-                        var prop = properties.GetProperties(new string[] { opcDaBrowseElement.ItemId }, new OpcDaPropertiesQuery(false));
-
-                        opcDaBrowseElement.ItemProperties.Properties = prop[0].Properties;
-
-                        Items.Add(opcDaBrowseElement);
-                    }
-                    catch (Exception e)
-                    {
-                        throw new OpcDaQueryException(OpcDaException.GET_CLIENT_GROUP_ITEM_ERROR, e.Message);
-                    }
-                }
+            }
+            catch (Exception ex){
+                Console.WriteLine(ex.ToString());
             }
         }
 
@@ -313,6 +265,5 @@ namespace DataLogger
 
             return MappingItem.GetTags(value);
         }
-
     }
 }

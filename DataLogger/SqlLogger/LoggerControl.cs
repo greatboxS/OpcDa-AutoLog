@@ -29,9 +29,7 @@ namespace DataLogger
 
         public int WriteLog(OpcDaItemValue[] result)
         {
-            string time = DateTime.Now.ToString("dd/MM/yyyy, hh:mm:ss");
-            if (result.Count() > 0)
-                time = result[0].Timestamp.ToString("dd/MM/yyyy, hh:mm:ss");
+            string time = DateTime.Now.ToString("dd/MM/yyyy, HH:mm:ss");
             var coulmns = MappingItem.GetCoulmnValues(result);
             string cmd = SqlCmdBuilder.InsertValue(DataBase, DbTable, time, coulmns);
             return CustomSqlLog.SqlExcuteNonQuery(ConnectionString, cmd);

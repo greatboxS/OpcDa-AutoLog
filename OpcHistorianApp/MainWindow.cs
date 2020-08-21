@@ -147,11 +147,10 @@ namespace OpcHistorianApp
         private void SvTree_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
             string serverPropId = e.Node.Text;
-
             this.ItemPropertyPanel.Controls.Clear();
             SelectedTag = new List<TagProperty>();
 
-            BeginInvoke(new MethodInvoker(() =>
+            Action action = new Action(()=>
             {
                 try
                 {
@@ -169,9 +168,10 @@ namespace OpcHistorianApp
                 }
                 catch (Exception ex)
                 {
-                    //MessageBox.Show(ex.ToString());
+                    MessageBox.Show(ex.ToString());
                 }
-            }));
+            });
+            action.Invoke();
         }
 
         private void SelectAllMenuItem_Click(object sender, EventArgs e)
