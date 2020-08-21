@@ -3149,3 +3149,353 @@
    at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
    at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
    at DataLogger.TitaniumOpcDaControl.GroupTimerCallback(Object state) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Titanium\TitaniumOpcDaControl.cs:line 150
+21/08/2020, 11:40:12 ==> Server is connected
+21/08/2020, 11:40:12 ==> Connect: True
+21/08/2020, 11:40:12 ==> From Group Id 1
+21/08/2020, 11:40:12 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:13 ==> Server is connected
+21/08/2020, 11:40:13 ==> Connect: True
+21/08/2020, 11:40:13 ==> From Group Id 1
+21/08/2020, 11:40:13 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:14 ==> Server is connected
+21/08/2020, 11:40:14 ==> Connect: True
+21/08/2020, 11:40:14 ==> From Group Id 1
+21/08/2020, 11:40:14 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:15 ==> Server is connected
+21/08/2020, 11:40:15 ==> Connect: True
+21/08/2020, 11:40:15 ==> From Group Id 1
+21/08/2020, 11:40:15 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:16 ==> Server is connected
+21/08/2020, 11:40:16 ==> Connect: True
+21/08/2020, 11:40:16 ==> From Group Id 1
+21/08/2020, 11:40:16 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:17 ==> Server is connected
+21/08/2020, 11:40:17 ==> Connect: True
+21/08/2020, 11:40:17 ==> From Group Id 1
+21/08/2020, 11:40:17 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:18 ==> Server is connected
+21/08/2020, 11:40:18 ==> Connect: True
+21/08/2020, 11:40:18 ==> From Group Id 1
+21/08/2020, 11:40:18 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:19 ==> Server is connected
+21/08/2020, 11:40:19 ==> Connect: True
+21/08/2020, 11:40:19 ==> From Group Id 1
+21/08/2020, 11:40:19 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:20 ==> Server is connected
+21/08/2020, 11:40:20 ==> Connect: True
+21/08/2020, 11:40:20 ==> From Group Id 1
+21/08/2020, 11:40:20 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:21 ==> Server is connected
+21/08/2020, 11:40:21 ==> Connect: True
+21/08/2020, 11:40:21 ==> From Group Id 1
+21/08/2020, 11:40:21 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:22 ==> Server is connected
+21/08/2020, 11:40:22 ==> Connect: True
+21/08/2020, 11:40:22 ==> From Group Id 1
+21/08/2020, 11:40:22 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:23 ==> Server is connected
+21/08/2020, 11:40:23 ==> Connect: True
+21/08/2020, 11:40:23 ==> From Group Id 1
+21/08/2020, 11:40:23 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:24 ==> Server is connected
+21/08/2020, 11:40:24 ==> Connect: True
+21/08/2020, 11:40:24 ==> From Group Id 1
+21/08/2020, 11:40:24 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:25 ==> Server is connected
+21/08/2020, 11:40:25 ==> Connect: True
+21/08/2020, 11:40:25 ==> From Group Id 1
+21/08/2020, 11:40:25 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:26 ==> Server is connected
+21/08/2020, 11:40:26 ==> Connect: True
+21/08/2020, 11:40:26 ==> From Group Id 1
+21/08/2020, 11:40:26 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:27 ==> Server is connected
+21/08/2020, 11:40:27 ==> Connect: True
+21/08/2020, 11:40:27 ==> From Group Id 1
+21/08/2020, 11:40:27 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:28 ==> Server is connected
+21/08/2020, 11:40:28 ==> Connect: True
+21/08/2020, 11:40:28 ==> From Group Id 1
+21/08/2020, 11:40:28 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:29 ==> Server is connected
+21/08/2020, 11:40:29 ==> Connect: True
+21/08/2020, 11:40:29 ==> From Group Id 1
+21/08/2020, 11:40:29 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:30 ==> Server is connected
+21/08/2020, 11:40:30 ==> Connect: True
+21/08/2020, 11:40:30 ==> From Group Id 1
+21/08/2020, 11:40:30 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:31 ==> Server is connected
+21/08/2020, 11:40:31 ==> Connect: True
+21/08/2020, 11:40:31 ==> From Group Id 1
+21/08/2020, 11:40:31 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:32 ==> Server is connected
+21/08/2020, 11:40:32 ==> Connect: True
+21/08/2020, 11:40:32 ==> From Group Id 1
+21/08/2020, 11:40:32 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:33 ==> Server is connected
+21/08/2020, 11:40:33 ==> Connect: True
+21/08/2020, 11:40:33 ==> From Group Id 1
+21/08/2020, 11:40:33 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:34 ==> Server is connected
+21/08/2020, 11:40:34 ==> Connect: True
+21/08/2020, 11:40:34 ==> From Group Id 1
+21/08/2020, 11:40:34 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:35 ==> Server is connected
+21/08/2020, 11:40:35 ==> Connect: True
+21/08/2020, 11:40:35 ==> From Group Id 1
+21/08/2020, 11:40:35 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:36 ==> Server is connected
+21/08/2020, 11:40:36 ==> Connect: True
+21/08/2020, 11:40:36 ==> From Group Id 1
+21/08/2020, 11:40:36 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:37 ==> Server is connected
+21/08/2020, 11:40:37 ==> Connect: True
+21/08/2020, 11:40:37 ==> From Group Id 1
+21/08/2020, 11:40:37 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:38 ==> Server is connected
+21/08/2020, 11:40:38 ==> Connect: True
+21/08/2020, 11:40:38 ==> From Group Id 1
+21/08/2020, 11:40:38 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:39 ==> Server is connected
+21/08/2020, 11:40:39 ==> Connect: True
+21/08/2020, 11:40:39 ==> From Group Id 1
+21/08/2020, 11:40:39 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:40 ==> Server is connected
+21/08/2020, 11:40:40 ==> Connect: True
+21/08/2020, 11:40:40 ==> From Group Id 1
+21/08/2020, 11:40:40 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:41 ==> Server is connected
+21/08/2020, 11:40:41 ==> Connect: True
+21/08/2020, 11:40:41 ==> From Group Id 1
+21/08/2020, 11:40:41 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:42 ==> Server is connected
+21/08/2020, 11:40:42 ==> Connect: True
+21/08/2020, 11:40:42 ==> From Group Id 1
+21/08/2020, 11:40:42 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:43 ==> Server is connected
+21/08/2020, 11:40:43 ==> Connect: True
+21/08/2020, 11:40:43 ==> From Group Id 1
+21/08/2020, 11:40:43 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:44 ==> Server is connected
+21/08/2020, 11:40:44 ==> Connect: True
+21/08/2020, 11:40:44 ==> From Group Id 1
+21/08/2020, 11:40:44 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:45 ==> Server is connected
+21/08/2020, 11:40:45 ==> Connect: True
+21/08/2020, 11:40:45 ==> From Group Id 1
+21/08/2020, 11:40:45 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:46 ==> Server is connected
+21/08/2020, 11:40:46 ==> Connect: True
+21/08/2020, 11:40:46 ==> From Group Id 1
+21/08/2020, 11:40:46 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:47 ==> Server is connected
+21/08/2020, 11:40:47 ==> Connect: True
+21/08/2020, 11:40:47 ==> From Group Id 1
+21/08/2020, 11:40:47 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:48 ==> Server is connected
+21/08/2020, 11:40:48 ==> Connect: True
+21/08/2020, 11:40:48 ==> From Group Id 1
+21/08/2020, 11:40:48 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:49 ==> Server is connected
+21/08/2020, 11:40:49 ==> Connect: True
+21/08/2020, 11:40:49 ==> From Group Id 1
+21/08/2020, 11:40:49 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:50 ==> Server is connected
+21/08/2020, 11:40:50 ==> Connect: True
+21/08/2020, 11:40:50 ==> From Group Id 1
+21/08/2020, 11:40:50 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:51 ==> Server is connected
+21/08/2020, 11:40:51 ==> Connect: True
+21/08/2020, 11:40:51 ==> From Group Id 1
+21/08/2020, 11:40:51 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:52 ==> Server is connected
+21/08/2020, 11:40:52 ==> Connect: True
+21/08/2020, 11:40:52 ==> From Group Id 1
+21/08/2020, 11:40:52 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:53 ==> Server is connected
+21/08/2020, 11:40:53 ==> Connect: True
+21/08/2020, 11:40:53 ==> From Group Id 1
+21/08/2020, 11:40:53 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:54 ==> Server is connected
+21/08/2020, 11:40:54 ==> Connect: True
+21/08/2020, 11:40:54 ==> From Group Id 1
+21/08/2020, 11:40:54 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:55 ==> Server is connected
+21/08/2020, 11:40:55 ==> Connect: True
+21/08/2020, 11:40:55 ==> From Group Id 1
+21/08/2020, 11:40:55 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:56 ==> Server is connected
+21/08/2020, 11:40:56 ==> Connect: True
+21/08/2020, 11:40:56 ==> From Group Id 1
+21/08/2020, 11:40:56 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:57 ==> Server is connected
+21/08/2020, 11:40:57 ==> Connect: True
+21/08/2020, 11:40:57 ==> From Group Id 1
+21/08/2020, 11:40:57 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:58 ==> Server is connected
+21/08/2020, 11:40:58 ==> Connect: True
+21/08/2020, 11:40:58 ==> From Group Id 1
+21/08/2020, 11:40:58 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:40:59 ==> Server is connected
+21/08/2020, 11:40:59 ==> Connect: True
+21/08/2020, 11:40:59 ==> From Group Id 1
+21/08/2020, 11:40:59 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:41:00 ==> Server is connected
+21/08/2020, 11:41:00 ==> Connect: True
+21/08/2020, 11:41:00 ==> From Group Id 1
+21/08/2020, 11:41:00 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
+21/08/2020, 11:41:01 ==> Server is connected
+21/08/2020, 11:41:01 ==> Connect: True
+21/08/2020, 11:41:01 ==> From Group Id 1
+21/08/2020, 11:41:01 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
+   at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
+   at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
