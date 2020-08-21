@@ -42,12 +42,11 @@ namespace DataLogger
                 WriteExceptionLogFile(ex.ToString());
             }
         }
-
         public static void WriteOnStartStopLogFile(bool onStartUp)
         {
             try
             {
-                if (DateTime.Now.Day == 1 || !ClearStartStopLog)
+                if (DateTime.Now.Day == 1 && !ClearStartStopLog)
                 {
                     File.WriteAllText(OnStartStopLogFilePath, "");
                     ClearStartStopLog = true;
@@ -71,7 +70,7 @@ namespace DataLogger
         {
             try
             {
-                if (DateTime.Now.Day == 1 || !ClearExceptionLog)
+                if (DateTime.Now.Day == 1 && !ClearExceptionLog)
                 {
                     File.WriteAllText(ExceptionLogFilePath, "");
                     ClearExceptionLog = true;
@@ -93,7 +92,7 @@ namespace DataLogger
         {
             try
             {
-                if (DateTime.Now.Day == 1 || !ClearRuntimeLog)
+                if (DateTime.Now.Day == 1 && !ClearRuntimeLog)
                 {
                     File.WriteAllText(RuntimeLogging, "");
                     ClearRuntimeLog = true;

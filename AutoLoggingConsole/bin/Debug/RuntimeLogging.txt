@@ -1,1 +1,32 @@
 06:36:02, 19/08/2020 ==> Log success
+21/08/2020, 10:23:07 ==> Read configurations
+21/08/2020, 10:23:07 ==> config file: D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\Config.xlsx
+21/08/2020, 10:23:08 ==> Add new file config, Id: 1
+21/08/2020, 10:23:09 ==> Success
+21/08/2020, 10:23:09 ==> Regist services
+21/08/2020, 10:23:09 ==> OPCDA Server name: Mitsubishi.MXOPC.6
+21/08/2020, 10:23:10 ==> Connecting to OpcDa Server successfully
+21/08/2020, 10:23:10 ==> Total group: 1
+21/08/2020, 10:23:10 ==> Registing new file configuration group, Id: 1
+21/08/2020, 10:23:10 ==> Group 4f4f1ca4-149f-4198-bdad-abd6776c5cb5 is activated
+21/08/2020, 10:23:10 ==> Start services
+21/08/2020, 10:23:11 ==> Server is connected
+21/08/2020, 10:23:11 ==> Connect: True
+21/08/2020, 10:23:11 ==> From Group Id 1
+21/08/2020, 10:23:11 ==> Log success
+21/08/2020, 10:23:12 ==> Server is connected
+21/08/2020, 10:23:12 ==> Connect: True
+21/08/2020, 10:23:12 ==> From Group Id 1
+21/08/2020, 10:23:12 ==> Log success
+21/08/2020, 10:23:13 ==> Server is connected
+21/08/2020, 10:23:13 ==> Connect: True
+21/08/2020, 10:23:13 ==> From Group Id 1
+21/08/2020, 10:23:13 ==> Log success
+21/08/2020, 10:23:14 ==> Server is connected
+21/08/2020, 10:23:14 ==> Connect: True
+21/08/2020, 10:23:14 ==> From Group Id 1
+21/08/2020, 10:23:14 ==> Log success
+21/08/2020, 10:23:15 ==> Server is connected
+21/08/2020, 10:23:15 ==> Connect: True
+21/08/2020, 10:23:15 ==> From Group Id 1
+21/08/2020, 10:23:15 ==> Log success
