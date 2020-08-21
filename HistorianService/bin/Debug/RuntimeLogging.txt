@@ -1,5 +1,5 @@
-21/08/2020, 09:49:39 ==> From Group Id 1
-21/08/2020, 09:49:39 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
+21/08/2020, 09:53:30 ==> From Group Id 1
+21/08/2020, 09:53:30 ==> System.NotSupportedException: OPC DA 2.x not supported by the server.
    at TitaniumAS.Opc.Client.Da.OpcDaGroup.CheckSupported(OpcDaGroupFeatures feature)
    at TitaniumAS.Opc.Client.Da.OpcDaGroup.Read(IList`1 items, OpcDaDataSource dataSource)
    at DataLogger.Services.LoggingServices.HandleLogging(OpcDaGroupWrapper wrapper) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 245
