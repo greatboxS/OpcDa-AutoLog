@@ -1,4 +1,5 @@
 ﻿using DataLogger;
+using DataLogger.Services;
 using Microsoft.Office.Interop.Excel;
 using Newtonsoft.Json;
 using OPCDataAccess.Models;
@@ -42,14 +43,14 @@ namespace OpcHistorianApp.ControlForm
         private void EventControl_UpdateCurrentGroupEvent(object sender, object userObject)
         {
             int groupId = (int)userObject;
-            List<TagProperty> tags = sender as List<TagProperty>;
+            List<OpcDaItem> tags = sender as List<OpcDaItem>;
             var current = LoggingGroup.Where(i => i.Id == groupId).FirstOrDefault();
             if (current !=null)
             {
                 for (int i = 0; i < tags.Count; i++)
                 {
-                    if (current.GroupTags.Where(index => index.Name == tags[i].Name).Count() == 0)
-                        current.GroupTags.Add(tags[i]);
+                    if (current.Items.Where(index => index.ItemName == tags[i].ItemName).Count() == 0)
+                        current.Items.Add(tags[i]);
                 }
 
                 EventControl.UpdateTagList(tags, groupId);
@@ -184,7 +185,9 @@ namespace OpcHistorianApp.ControlForm
         {
             if (start)
             {
-                TitaniumOpcDaControl.CreateOpcDaGroup(LoggingGroup[0], true);
+                //LoggingServices.OpcDaClient.CreateOpcDaGroup(LoggingGroup[0], true);
+
+
                 lbBeginTime.Text = $"Test begin: {DateTime.Now}";
                 StartTestMenu.Text = "Stop testing";
                 TestTime = new TimeSpan(0, 0, 0);
@@ -197,7 +200,7 @@ namespace OpcHistorianApp.ControlForm
                 temp = temp.Replace("Runing:", "Stopping:");
                 txtTestTime.Text = temp;
                 TestTimer.Stop();
-                foreach (var item in TitaniumOpcDaControl.OpcDaWrappers)
+                foreach (var item in LoggingServices.WrapColletion.OpcDaSubcriptionWrapper)
                 {
                     if (item.Timer != null)
                     {

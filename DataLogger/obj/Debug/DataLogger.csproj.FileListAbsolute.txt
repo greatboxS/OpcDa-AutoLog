@@ -64,11 +64,10 @@ D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\bin\Debu
 D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\bin\Debug\EntityFramework.dll
 D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\bin\Debug\EntityFramework.SqlServer.dll
 D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\bin\Debug\EPPlus.dll
-D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\bin\Debug\OPCDataAccess.dll
-D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\bin\Debug\TitaniumAS.Opc.Client.dll
-D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\bin\Debug\OpcNetApi.dll
-D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\bin\Debug\OpcNetApi.Com.dll
 D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\bin\Debug\OpcComRcw.dll
+D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\bin\Debug\OPCDataAccess.dll
+D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\bin\Debug\OpcNetApi.Com.dll
+D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\bin\Debug\OpcNetApi.dll
 D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\bin\Debug\OPCDataAccess.pdb
 D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\bin\Debug\OPCDataAccess.dll.config
 D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\bin\Debug\Common.Logging.pdb

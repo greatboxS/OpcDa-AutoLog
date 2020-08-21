@@ -37,7 +37,7 @@ namespace OpcHistorianApp.ControlForm
             CurrentGroup = group;
 
             DSSqlSetting.DataSource = CurrentGroup.SqlSetting;
-            DSTags.DataSource = CurrentGroup.GroupTags;
+            DSTags.DataSource = CurrentGroup.Items;
             txtGroup.Text = CurrentGroup.GroupName;
             this.TagList.ContextMenuStrip = TagListMenu;
             txtOpcDaServer.Text = group.OPCServerName;
@@ -48,7 +48,7 @@ namespace OpcHistorianApp.ControlForm
         {
             try
             {
-                var tags = sender as IList<TagProperty>;
+                var tags = sender as IList<OpcDaItem>;
                 int id = (int)userObject;
 
                 if (id != Id) return;
@@ -67,16 +67,16 @@ namespace OpcHistorianApp.ControlForm
         {
             TagList.DataSource = null;
             TagList.Items.Clear();
-            DSTags.DataSource = CurrentGroup.GroupTags;
+            DSTags.DataSource = CurrentGroup.Items;
             TagList.DataSource = DSTags;
-            TagList.DisplayMember = "Name";
+            TagList.DisplayMember = "ItemName";
         }
 
         private void DeleteMenu_Click(object sender, EventArgs e)
         {
             if (TagList.SelectedItem != null)
             {
-                CurrentGroup.GroupTags.Remove((TagList.SelectedItem as TagProperty));
+                CurrentGroup.Items.Remove((TagList.SelectedItem as OpcDaItem));
                 RefreshTagListBox();
                 EventControl.SaveChanged(CurrentGroup);
             }

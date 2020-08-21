@@ -739,3 +739,329 @@
 05:10:39, 18/08/2020 ==> Log success
 05:10:39, 18/08/2020 ==> From Group Id 0
 05:10:40, 18/08/2020 ==> Log success
+03:25:00, 21/08/2020 ==> config file: D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\Config.xlsx
+03:25:01, 21/08/2020 ==> Add new file config, Id: 1
+03:25:02, 21/08/2020 ==> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DataLogger.Services.LoggingServices.<>c.<CheckSQlServerService>b__12_0(LoggingGroup i) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 108
+   at System.Linq.Lookup`2.Create[TSource](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   at System.Linq.GroupedEnumerable`3.GetEnumerator()
+   at DataLogger.Services.LoggingServices.CheckSQlServerService() in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 110
+03:42:20, 21/08/2020 ==> config file: D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\config.xlsx
+03:42:20, 21/08/2020 ==> Add new file config, Id: 1
+03:42:20, 21/08/2020 ==> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DataLogger.Services.LoggingServices.<>c.<CheckSQlServerService>b__12_0(LoggingGroup i) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 108
+   at System.Linq.Lookup`2.Create[TSource](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   at System.Linq.GroupedEnumerable`3.GetEnumerator()
+   at DataLogger.Services.LoggingServices.CheckSQlServerService() in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 110
+03:43:29, 21/08/2020 ==> config file: D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\config.xlsx
+03:44:35, 21/08/2020 ==> Add new file config, Id: 1
+03:44:35, 21/08/2020 ==> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DataLogger.Services.LoggingServices.<>c.<CheckSQlServerService>b__12_0(LoggingGroup i) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 108
+   at System.Linq.Lookup`2.Create[TSource](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   at System.Linq.GroupedEnumerable`3.GetEnumerator()
+   at DataLogger.Services.LoggingServices.CheckSQlServerService() in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 110
+03:45:22, 21/08/2020 ==> config file: D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\config.xlsx
+03:45:28, 21/08/2020 ==> Add new file config, Id: 1
+03:45:28, 21/08/2020 ==> System.NullReferenceException: Object reference not set to an instance of an object.
+   at DataLogger.Services.LoggingServices.<>c.<CheckSQlServerService>b__12_0(LoggingGroup i) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 108
+   at System.Linq.Lookup`2.Create[TSource](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   at System.Linq.GroupedEnumerable`3.GetEnumerator()
+   at DataLogger.Services.LoggingServices.CheckSQlServerService() in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 110
+03:46:50, 21/08/2020 ==> config file: D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\config.xlsx
+03:47:04, 21/08/2020 ==> Add new file config, Id: 1
+03:47:36, 21/08/2020 ==> config file: D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\config.xlsx
+03:47:40, 21/08/2020 ==> Add new file config, Id: 1
+03:48:34, 21/08/2020 ==> config file: D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\config.xlsx
+03:49:19, 21/08/2020 ==> config file: D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\config.xlsx
+03:49:24, 21/08/2020 ==> Add new file config, Id: 1
+03:49:30, 21/08/2020 ==> Success
+03:49:35, 21/08/2020 ==> OPCDA Server name: Mitsubishi.MXOPC
+03:49:37, 21/08/2020 ==> Connecting to OpcDa Server successfully
+03:49:37, 21/08/2020 ==> Total group: 1
+03:49:37, 21/08/2020 ==> Registing new file configuration group, Id: 
+04:01:19, 21/08/2020 ==> config file: D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\config.xlsx
+04:01:20, 21/08/2020 ==> Add new file config, Id: 1
+04:01:22, 21/08/2020 ==> Success
+04:01:22, 21/08/2020 ==> OPCDA Server name: Mitsubishi.MXOPC
+04:01:24, 21/08/2020 ==> Connecting to OpcDa Server successfully
+04:01:24, 21/08/2020 ==> Total group: 1
+04:01:24, 21/08/2020 ==> Registing new file configuration group, Id: 
+04:04:35, 21/08/2020 ==> config file: D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\config.xlsx
+04:04:35, 21/08/2020 ==> Add new file config, Id: 1
+04:04:37, 21/08/2020 ==> Success
+04:04:37, 21/08/2020 ==> OPCDA Server name: Mitsubishi.MXOPC
+04:04:39, 21/08/2020 ==> Connecting to OpcDa Server successfully
+04:04:39, 21/08/2020 ==> Total group: 1
+04:04:39, 21/08/2020 ==> Registing new file configuration group, Id: 
+04:20:35, 21/08/2020 ==> config file: D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\config.xlsx
+04:20:36, 21/08/2020 ==> Add new file config, Id: 1
+04:20:36, 21/08/2020 ==> Success
+04:20:36, 21/08/2020 ==> OPCDA Server name: Mitsubishi.MXOPC
+04:20:38, 21/08/2020 ==> Connecting to OpcDa Server successfully
+04:20:38, 21/08/2020 ==> Total group: 1
+04:20:38, 21/08/2020 ==> Registing new file configuration group, Id: 
+04:20:38, 21/08/2020 ==> Logging : 91d3358f-8555-4a98-b5de-220dd285ef5b
+04:20:39, 21/08/2020 ==> Logging : 91d3358f-8555-4a98-b5de-220dd285ef5b
+04:20:40, 21/08/2020 ==> Logging : 91d3358f-8555-4a98-b5de-220dd285ef5b
+04:20:41, 21/08/2020 ==> Logging : 91d3358f-8555-4a98-b5de-220dd285ef5b
+04:20:42, 21/08/2020 ==> Logging : 91d3358f-8555-4a98-b5de-220dd285ef5b
+04:20:43, 21/08/2020 ==> Logging : 91d3358f-8555-4a98-b5de-220dd285ef5b
+04:20:44, 21/08/2020 ==> Logging : 91d3358f-8555-4a98-b5de-220dd285ef5b
+04:20:45, 21/08/2020 ==> Logging : 91d3358f-8555-4a98-b5de-220dd285ef5b
+04:20:46, 21/08/2020 ==> Logging : 91d3358f-8555-4a98-b5de-220dd285ef5b
+04:20:47, 21/08/2020 ==> Logging : 91d3358f-8555-4a98-b5de-220dd285ef5b
+04:20:48, 21/08/2020 ==> Logging : 91d3358f-8555-4a98-b5de-220dd285ef5b
+04:20:49, 21/08/2020 ==> Logging : 91d3358f-8555-4a98-b5de-220dd285ef5b
+04:20:50, 21/08/2020 ==> Logging : 91d3358f-8555-4a98-b5de-220dd285ef5b
+04:20:51, 21/08/2020 ==> Logging : 91d3358f-8555-4a98-b5de-220dd285ef5b
+04:20:52, 21/08/2020 ==> Logging : 91d3358f-8555-4a98-b5de-220dd285ef5b
+04:20:53, 21/08/2020 ==> Logging : 91d3358f-8555-4a98-b5de-220dd285ef5b
+04:20:54, 21/08/2020 ==> Logging : 91d3358f-8555-4a98-b5de-220dd285ef5b
+04:20:55, 21/08/2020 ==> Logging : 91d3358f-8555-4a98-b5de-220dd285ef5b
+04:20:56, 21/08/2020 ==> Logging : 91d3358f-8555-4a98-b5de-220dd285ef5b
+04:20:57, 21/08/2020 ==> Logging : 91d3358f-8555-4a98-b5de-220dd285ef5b
+04:20:58, 21/08/2020 ==> Logging : 91d3358f-8555-4a98-b5de-220dd285ef5b
+04:20:59, 21/08/2020 ==> Logging : 91d3358f-8555-4a98-b5de-220dd285ef5b
+04:21:00, 21/08/2020 ==> Logging : 91d3358f-8555-4a98-b5de-220dd285ef5b
+04:21:01, 21/08/2020 ==> Logging : 91d3358f-8555-4a98-b5de-220dd285ef5b
+04:21:02, 21/08/2020 ==> Logging : 91d3358f-8555-4a98-b5de-220dd285ef5b
+04:21:03, 21/08/2020 ==> Logging : 91d3358f-8555-4a98-b5de-220dd285ef5b
+04:21:04, 21/08/2020 ==> Logging : 91d3358f-8555-4a98-b5de-220dd285ef5b
+04:21:05, 21/08/2020 ==> Logging : 91d3358f-8555-4a98-b5de-220dd285ef5b
+04:21:06, 21/08/2020 ==> Logging : 91d3358f-8555-4a98-b5de-220dd285ef5b
+04:21:07, 21/08/2020 ==> Logging : 91d3358f-8555-4a98-b5de-220dd285ef5b
+04:21:08, 21/08/2020 ==> Logging : 91d3358f-8555-4a98-b5de-220dd285ef5b
+04:21:09, 21/08/2020 ==> Logging : 91d3358f-8555-4a98-b5de-220dd285ef5b
+04:52:26, 21/08/2020 ==> config file: D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\config.xlsx
+04:52:27, 21/08/2020 ==> Add new file config, Id: 1
+04:52:28, 21/08/2020 ==> Success
+04:52:28, 21/08/2020 ==> OPCDA Server name: Mitsubishi.MXOPC
+04:52:30, 21/08/2020 ==> Connecting to OpcDa Server successfully
+04:52:30, 21/08/2020 ==> Total group: 1
+04:52:30, 21/08/2020 ==> Registing new file configuration group, Id: 
+04:52:31, 21/08/2020 ==> Logging : da8b68bc-6567-4ad5-9733-079970e56451
+04:52:31, 21/08/2020 ==> Success
+04:52:32, 21/08/2020 ==> Logging : da8b68bc-6567-4ad5-9733-079970e56451
+04:52:32, 21/08/2020 ==> Success
+04:52:33, 21/08/2020 ==> Logging : da8b68bc-6567-4ad5-9733-079970e56451
+04:52:33, 21/08/2020 ==> Success
+04:52:34, 21/08/2020 ==> Logging : da8b68bc-6567-4ad5-9733-079970e56451
+04:52:34, 21/08/2020 ==> Success
+04:52:35, 21/08/2020 ==> Logging : da8b68bc-6567-4ad5-9733-079970e56451
+04:52:35, 21/08/2020 ==> Success
+04:52:36, 21/08/2020 ==> Logging : da8b68bc-6567-4ad5-9733-079970e56451
+04:52:36, 21/08/2020 ==> Success
+04:52:37, 21/08/2020 ==> Logging : da8b68bc-6567-4ad5-9733-079970e56451
+04:52:37, 21/08/2020 ==> Success
+04:52:38, 21/08/2020 ==> Logging : da8b68bc-6567-4ad5-9733-079970e56451
+04:52:38, 21/08/2020 ==> Success
+04:52:39, 21/08/2020 ==> Logging : da8b68bc-6567-4ad5-9733-079970e56451
+04:52:39, 21/08/2020 ==> Success
+04:52:40, 21/08/2020 ==> Logging : da8b68bc-6567-4ad5-9733-079970e56451
+04:52:40, 21/08/2020 ==> Success
+04:52:41, 21/08/2020 ==> Logging : da8b68bc-6567-4ad5-9733-079970e56451
+04:52:41, 21/08/2020 ==> Success
+04:52:42, 21/08/2020 ==> Logging : da8b68bc-6567-4ad5-9733-079970e56451
+04:52:42, 21/08/2020 ==> Success
+04:52:43, 21/08/2020 ==> Logging : da8b68bc-6567-4ad5-9733-079970e56451
+04:52:43, 21/08/2020 ==> Success
+04:52:44, 21/08/2020 ==> Logging : da8b68bc-6567-4ad5-9733-079970e56451
+04:52:44, 21/08/2020 ==> Success
+04:52:45, 21/08/2020 ==> Logging : da8b68bc-6567-4ad5-9733-079970e56451
+04:52:45, 21/08/2020 ==> Success
+04:52:46, 21/08/2020 ==> Logging : da8b68bc-6567-4ad5-9733-079970e56451
+04:52:46, 21/08/2020 ==> Success
+04:52:47, 21/08/2020 ==> Logging : da8b68bc-6567-4ad5-9733-079970e56451
+04:52:47, 21/08/2020 ==> Success
+04:52:48, 21/08/2020 ==> Logging : da8b68bc-6567-4ad5-9733-079970e56451
+04:52:48, 21/08/2020 ==> Success
+04:52:49, 21/08/2020 ==> Logging : da8b68bc-6567-4ad5-9733-079970e56451
+04:52:49, 21/08/2020 ==> Success
+04:52:50, 21/08/2020 ==> Logging : da8b68bc-6567-4ad5-9733-079970e56451
+04:52:50, 21/08/2020 ==> Success
+04:52:51, 21/08/2020 ==> Logging : da8b68bc-6567-4ad5-9733-079970e56451
+04:52:51, 21/08/2020 ==> Success
+04:52:52, 21/08/2020 ==> Logging : da8b68bc-6567-4ad5-9733-079970e56451
+04:52:52, 21/08/2020 ==> Success
+04:52:53, 21/08/2020 ==> Logging : da8b68bc-6567-4ad5-9733-079970e56451
+04:52:53, 21/08/2020 ==> Success
+04:52:54, 21/08/2020 ==> Logging : da8b68bc-6567-4ad5-9733-079970e56451
+04:52:54, 21/08/2020 ==> Success
+04:52:55, 21/08/2020 ==> Logging : da8b68bc-6567-4ad5-9733-079970e56451
+04:52:55, 21/08/2020 ==> Success
+04:52:56, 21/08/2020 ==> Logging : da8b68bc-6567-4ad5-9733-079970e56451
+04:52:56, 21/08/2020 ==> Success
+04:52:57, 21/08/2020 ==> Logging : da8b68bc-6567-4ad5-9733-079970e56451
+04:52:57, 21/08/2020 ==> Success
+04:52:58, 21/08/2020 ==> Logging : da8b68bc-6567-4ad5-9733-079970e56451
+04:52:58, 21/08/2020 ==> Success
+04:52:59, 21/08/2020 ==> Logging : da8b68bc-6567-4ad5-9733-079970e56451
+04:52:59, 21/08/2020 ==> Success
+04:53:00, 21/08/2020 ==> Logging : da8b68bc-6567-4ad5-9733-079970e56451
+04:53:00, 21/08/2020 ==> Success
+04:53:01, 21/08/2020 ==> Logging : da8b68bc-6567-4ad5-9733-079970e56451
+04:53:01, 21/08/2020 ==> Success
+04:53:02, 21/08/2020 ==> Logging : da8b68bc-6567-4ad5-9733-079970e56451
+04:53:02, 21/08/2020 ==> Success
+04:53:03, 21/08/2020 ==> Logging : da8b68bc-6567-4ad5-9733-079970e56451
+04:53:03, 21/08/2020 ==> Success
+04:54:44, 21/08/2020 ==> config file: D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\config.xlsx
+04:54:44, 21/08/2020 ==> Add new file config, Id: 1
+04:54:45, 21/08/2020 ==> Success
+04:54:45, 21/08/2020 ==> OPCDA Server name: Mitsubishi.MXOPC
+04:54:46, 21/08/2020 ==> Connecting to OpcDa Server successfully
+04:54:46, 21/08/2020 ==> Total group: 1
+04:54:46, 21/08/2020 ==> Registing new file configuration group, Id: 
+04:54:46, 21/08/2020 ==> Logging : e19e993e-de50-477b-a86e-5e4eddb0b55c
+04:54:47, 21/08/2020 ==> Logging : e19e993e-de50-477b-a86e-5e4eddb0b55c
+04:54:48, 21/08/2020 ==> Logging : e19e993e-de50-477b-a86e-5e4eddb0b55c
+04:54:49, 21/08/2020 ==> Logging : e19e993e-de50-477b-a86e-5e4eddb0b55c
+04:54:50, 21/08/2020 ==> Logging : e19e993e-de50-477b-a86e-5e4eddb0b55c
+04:54:51, 21/08/2020 ==> Logging : e19e993e-de50-477b-a86e-5e4eddb0b55c
+04:54:52, 21/08/2020 ==> Logging : e19e993e-de50-477b-a86e-5e4eddb0b55c
+04:54:58, 21/08/2020 ==> config file: D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\config.xlsx
+04:54:59, 21/08/2020 ==> Add new file config, Id: 1
+04:54:59, 21/08/2020 ==> Success
+04:54:59, 21/08/2020 ==> OPCDA Server name: Mitsubishi.MXOPC
+04:55:01, 21/08/2020 ==> Connecting to OpcDa Server successfully
+04:55:01, 21/08/2020 ==> Total group: 1
+04:55:01, 21/08/2020 ==> Registing new file configuration group, Id: 
+04:55:01, 21/08/2020 ==> Logging : e192ad27-79a6-477e-867f-1b5505e98cb2
+04:55:01, 21/08/2020 ==> Failed
+04:55:02, 21/08/2020 ==> Logging : e192ad27-79a6-477e-867f-1b5505e98cb2
+04:55:02, 21/08/2020 ==> Failed
+04:55:03, 21/08/2020 ==> Logging : e192ad27-79a6-477e-867f-1b5505e98cb2
+04:55:03, 21/08/2020 ==> Failed
+04:55:04, 21/08/2020 ==> Logging : e192ad27-79a6-477e-867f-1b5505e98cb2
+04:55:04, 21/08/2020 ==> Failed
+04:55:05, 21/08/2020 ==> Logging : e192ad27-79a6-477e-867f-1b5505e98cb2
+04:55:05, 21/08/2020 ==> Failed
+04:55:06, 21/08/2020 ==> Logging : e192ad27-79a6-477e-867f-1b5505e98cb2
+04:55:06, 21/08/2020 ==> Failed
+04:55:07, 21/08/2020 ==> Logging : e192ad27-79a6-477e-867f-1b5505e98cb2
+04:55:07, 21/08/2020 ==> Failed
+04:55:08, 21/08/2020 ==> Logging : e192ad27-79a6-477e-867f-1b5505e98cb2
+04:55:08, 21/08/2020 ==> Failed
+04:55:09, 21/08/2020 ==> Logging : e192ad27-79a6-477e-867f-1b5505e98cb2
+04:55:09, 21/08/2020 ==> Failed
+04:55:10, 21/08/2020 ==> Logging : e192ad27-79a6-477e-867f-1b5505e98cb2
+04:55:10, 21/08/2020 ==> Failed
+04:55:11, 21/08/2020 ==> Logging : e192ad27-79a6-477e-867f-1b5505e98cb2
+04:55:11, 21/08/2020 ==> Failed
+04:55:12, 21/08/2020 ==> Logging : e192ad27-79a6-477e-867f-1b5505e98cb2
+04:55:12, 21/08/2020 ==> Failed
+04:55:13, 21/08/2020 ==> Logging : e192ad27-79a6-477e-867f-1b5505e98cb2
+04:55:13, 21/08/2020 ==> Failed
+04:55:14, 21/08/2020 ==> Logging : e192ad27-79a6-477e-867f-1b5505e98cb2
+04:55:14, 21/08/2020 ==> Failed
+04:55:15, 21/08/2020 ==> Logging : e192ad27-79a6-477e-867f-1b5505e98cb2
+04:55:15, 21/08/2020 ==> Failed
+04:55:16, 21/08/2020 ==> Logging : e192ad27-79a6-477e-867f-1b5505e98cb2
+04:55:16, 21/08/2020 ==> Failed
+04:55:17, 21/08/2020 ==> Logging : e192ad27-79a6-477e-867f-1b5505e98cb2
+04:55:17, 21/08/2020 ==> Failed
+04:55:18, 21/08/2020 ==> Logging : e192ad27-79a6-477e-867f-1b5505e98cb2
+04:55:18, 21/08/2020 ==> Failed
+04:55:19, 21/08/2020 ==> Logging : e192ad27-79a6-477e-867f-1b5505e98cb2
+04:55:19, 21/08/2020 ==> Failed
+04:55:20, 21/08/2020 ==> Logging : e192ad27-79a6-477e-867f-1b5505e98cb2
+04:55:20, 21/08/2020 ==> Failed
+04:55:21, 21/08/2020 ==> Logging : e192ad27-79a6-477e-867f-1b5505e98cb2
+04:55:21, 21/08/2020 ==> Failed
+04:55:22, 21/08/2020 ==> Logging : e192ad27-79a6-477e-867f-1b5505e98cb2
+04:55:22, 21/08/2020 ==> Failed
+04:55:23, 21/08/2020 ==> Logging : e192ad27-79a6-477e-867f-1b5505e98cb2
+04:55:23, 21/08/2020 ==> Failed
+04:55:25, 21/08/2020 ==> Logging : e192ad27-79a6-477e-867f-1b5505e98cb2
+04:55:25, 21/08/2020 ==> Failed
+04:55:26, 21/08/2020 ==> Logging : e192ad27-79a6-477e-867f-1b5505e98cb2
+04:55:26, 21/08/2020 ==> Failed
+04:55:27, 21/08/2020 ==> Logging : e192ad27-79a6-477e-867f-1b5505e98cb2
+04:55:27, 21/08/2020 ==> Failed
+04:55:34, 21/08/2020 ==> config file: D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\config.xlsx
+04:55:35, 21/08/2020 ==> Add new file config, Id: 1
+04:55:35, 21/08/2020 ==> Success
+04:55:35, 21/08/2020 ==> OPCDA Server name: Mitsubishi.MXOPC
+04:55:37, 21/08/2020 ==> Connecting to OpcDa Server successfully
+04:55:37, 21/08/2020 ==> Total group: 1
+04:55:37, 21/08/2020 ==> Registing new file configuration group, Id: 
+04:55:37, 21/08/2020 ==> Failed
+04:55:38, 21/08/2020 ==> Failed
+04:55:39, 21/08/2020 ==> Failed
+04:55:40, 21/08/2020 ==> Failed
+04:55:41, 21/08/2020 ==> Failed
+04:55:42, 21/08/2020 ==> Failed
+04:55:52, 21/08/2020 ==> config file: D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\config.xlsx
+04:55:53, 21/08/2020 ==> Add new file config, Id: 1
+04:55:53, 21/08/2020 ==> Success
+04:55:53, 21/08/2020 ==> OPCDA Server name: Mitsubishi.MXOPC
+04:55:55, 21/08/2020 ==> Connecting to OpcDa Server successfully
+04:55:55, 21/08/2020 ==> Total group: 1
+04:55:55, 21/08/2020 ==> Registing new file configuration group, Id: 
+04:55:55, 21/08/2020 ==> Failed
+04:55:56, 21/08/2020 ==> Failed
+04:55:57, 21/08/2020 ==> Failed
+04:55:58, 21/08/2020 ==> Failed
+04:55:59, 21/08/2020 ==> Failed
+04:56:00, 21/08/2020 ==> Failed
+04:56:01, 21/08/2020 ==> Failed
+04:56:03, 21/08/2020 ==> Failed
+04:56:04, 21/08/2020 ==> Failed
+04:56:05, 21/08/2020 ==> Failed
+04:56:06, 21/08/2020 ==> Failed
+04:56:23, 21/08/2020 ==> config file: D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\config.xlsx
+04:56:24, 21/08/2020 ==> Add new file config, Id: 1
+04:56:25, 21/08/2020 ==> Success
+04:56:25, 21/08/2020 ==> OPCDA Server name: Mitsubishi.MXOPC
+04:56:28, 21/08/2020 ==> Connecting to OpcDa Server successfully
+04:56:28, 21/08/2020 ==> Total group: 1
+04:56:28, 21/08/2020 ==> Registing new file configuration group, Id: 
+04:57:20, 21/08/2020 ==> config file: D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\config.xlsx
+04:57:20, 21/08/2020 ==> Add new file config, Id: 1
+04:57:21, 21/08/2020 ==> Success
+04:57:21, 21/08/2020 ==> OPCDA Server name: Mitsubishi.MXOPC
+04:57:23, 21/08/2020 ==> Connecting to OpcDa Server successfully
+04:57:23, 21/08/2020 ==> Total group: 1
+04:57:23, 21/08/2020 ==> Registing new file configuration group, Id: 
+05:00:25, 21/08/2020 ==> config file: D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\config.xlsx
+05:00:26, 21/08/2020 ==> Add new file config, Id: 1
+05:00:26, 21/08/2020 ==> Success
+05:00:26, 21/08/2020 ==> OPCDA Server name: Mitsubishi.MXOPC
+05:00:27, 21/08/2020 ==> Connecting to OpcDa Server successfully
+05:00:27, 21/08/2020 ==> Total group: 1
+05:00:27, 21/08/2020 ==> Registing new file configuration group, Id: 
+05:12:03, 21/08/2020 ==> config file: D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\config.xlsx
+05:12:04, 21/08/2020 ==> Add new file config, Id: 1
+05:12:05, 21/08/2020 ==> Success
+05:12:05, 21/08/2020 ==> OPCDA Server name: Mitsubishi.MXOPC
+05:12:07, 21/08/2020 ==> Connecting to OpcDa Server successfully
+05:12:07, 21/08/2020 ==> Total group: 1
+05:12:07, 21/08/2020 ==> Registing new file configuration group, Id: 
+05:15:35, 21/08/2020 ==> config file: D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\config.xlsx
+05:15:36, 21/08/2020 ==> Add new file config, Id: 1
+05:15:36, 21/08/2020 ==> Success
+05:15:36, 21/08/2020 ==> OPCDA Server name: Mitsubishi.MXOPC
+05:15:38, 21/08/2020 ==> Connecting to OpcDa Server successfully
+05:15:38, 21/08/2020 ==> Total group: 1
+05:15:38, 21/08/2020 ==> Registing new file configuration group, Id: 
+05:38:39, 21/08/2020 ==> config file: D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\config.xlsx
+05:38:41, 21/08/2020 ==> Add new file config, Id: 1
+05:38:44, 21/08/2020 ==> Success
+05:38:44, 21/08/2020 ==> OPCDA Server name: Mitsubishi.MXOPC
+05:38:48, 21/08/2020 ==> Connecting to OpcDa Server successfully
+05:38:48, 21/08/2020 ==> Total group: 1
+05:38:48, 21/08/2020 ==> Registing new file configuration group, Id: 
+05:39:23, 21/08/2020 ==> config file: D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\config.xlsx
+05:39:24, 21/08/2020 ==> Add new file config, Id: 1
+05:39:26, 21/08/2020 ==> Success
+05:39:26, 21/08/2020 ==> OPCDA Server name: Mitsubishi.MXOPC
+05:39:29, 21/08/2020 ==> Connecting to OpcDa Server successfully
+05:39:29, 21/08/2020 ==> Total group: 1
+05:39:29, 21/08/2020 ==> Registing new file configuration group, Id: 
+05:42:20, 21/08/2020 ==> config file: D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\config.xlsx
+05:42:22, 21/08/2020 ==> Add new file config, Id: 1
+05:42:24, 21/08/2020 ==> Success
+05:42:24, 21/08/2020 ==> OPCDA Server name: Mitsubishi.MXOPC
+05:42:28, 21/08/2020 ==> Connecting to OpcDa Server successfully
+05:42:28, 21/08/2020 ==> Total group: 1
+05:42:28, 21/08/2020 ==> Registing new file configuration group, Id: 

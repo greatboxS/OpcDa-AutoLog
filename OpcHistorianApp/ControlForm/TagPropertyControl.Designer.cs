@@ -1,6 +1,6 @@
 ﻿namespace OpcHistorianApp.ControlForm
 {
-    partial class TagPropertyControl
+    partial class OpcDaItemControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -80,7 +80,7 @@
             this.txtTagType.Text = "#tagType";
             this.txtTagType.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // TagPropertyControl
+            // OpcDaItemControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -90,7 +90,7 @@
             this.Controls.Add(this.txtTagName);
             this.Controls.Add(this.TagSelection);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "TagPropertyControl";
+            this.Name = "OpcDaItemControl";
             this.Size = new System.Drawing.Size(399, 21);
             this.ResumeLayout(false);
             this.PerformLayout();

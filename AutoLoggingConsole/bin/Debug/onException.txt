@@ -1,0 +1,24 @@
+03:25:02, 21/08/2020 ==> Log Message:
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DataLogger.Services.LoggingServices.<>c.<CheckSQlServerService>b__12_0(LoggingGroup i) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 108
+   at System.Linq.Lookup`2.Create[TSource](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   at System.Linq.GroupedEnumerable`3.GetEnumerator()
+   at DataLogger.Services.LoggingServices.CheckSQlServerService() in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 110
+03:42:20, 21/08/2020 ==> Log Message:
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DataLogger.Services.LoggingServices.<>c.<CheckSQlServerService>b__12_0(LoggingGroup i) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 108
+   at System.Linq.Lookup`2.Create[TSource](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   at System.Linq.GroupedEnumerable`3.GetEnumerator()
+   at DataLogger.Services.LoggingServices.CheckSQlServerService() in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 110
+03:44:35, 21/08/2020 ==> Log Message:
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DataLogger.Services.LoggingServices.<>c.<CheckSQlServerService>b__12_0(LoggingGroup i) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 108
+   at System.Linq.Lookup`2.Create[TSource](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   at System.Linq.GroupedEnumerable`3.GetEnumerator()
+   at DataLogger.Services.LoggingServices.CheckSQlServerService() in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 110
+03:45:28, 21/08/2020 ==> Log Message:
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at DataLogger.Services.LoggingServices.<>c.<CheckSQlServerService>b__12_0(LoggingGroup i) in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 108
+   at System.Linq.Lookup`2.Create[TSource](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   at System.Linq.GroupedEnumerable`3.GetEnumerator()
+   at DataLogger.Services.LoggingServices.CheckSQlServerService() in D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\DataLogger\Services\LoggingServices.cs:line 110

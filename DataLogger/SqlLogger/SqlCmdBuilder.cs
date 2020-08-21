@@ -28,7 +28,7 @@ namespace DataLogger
             return cmd;
         }
 
-        public static string InsertValue(string db, string table, string time, IList<ColumnProperty> columns)
+        public static string InsertValue(string db, string table, string time, IList<SqlTableColumn> columns)
         {
             string cmd = $"USE {db}; INSERT INTO {table}";
 
@@ -58,7 +58,7 @@ namespace DataLogger
             return cmd;
         }
 
-        public static string CreatTable(string table, IList<ColumnProperty> columns)
+        public static string CreatTable(string table, IList<SqlTableColumn> columns)
         {
             string cmd = string.Empty;
 
@@ -74,7 +74,7 @@ namespace DataLogger
             return cmd;
         }
 
-        public static string AddColumnIfNotExistCmd(string table, ColumnProperty column)
+        public static string AddColumnIfNotExistCmd(string table, SqlTableColumn column)
         {
             string cmd = string.Format($"IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = '{table}' AND COLUMN_NAME = '{column.ColumnName}') " +
                 $"BEGIN " +

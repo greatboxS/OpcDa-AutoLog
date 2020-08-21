@@ -16,7 +16,7 @@ namespace OPCDataAccess.Models
         public string OPCServerName { get; set; } = string.Empty;
         public int IntervalUpdateTime { get; set; } = 1000;
         public SqlSetting SqlSetting { get; set; } = new SqlSetting();
-        public IList<TagProperty> GroupTags { get; set; } = new List<TagProperty>();
+        public IList<OpcDaItem> Items { get; set; } = new List<OpcDaItem>();
         public GroupState State { get; set; } = GroupState.SETTING;
         public int TotalTag { get; set; } = 0;
 

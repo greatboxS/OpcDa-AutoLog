@@ -66,11 +66,8 @@ D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\
 D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\EntityFramework.SqlServer.dll
 D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\OPCDataAccess.dll
 D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\EPPlus.dll
-D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\TitaniumAS.Opc.Client.dll
 D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\OpcNetApi.dll
 D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\OpcNetApi.Com.dll
-D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\Common.Logging.Core.dll
-D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\Common.Logging.dll
 D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\OpcComRcw.dll
 D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\DataLogger.pdb
 D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\DataLogger.dll.config
@@ -79,10 +76,6 @@ D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\
 D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\OPCDataAccess.pdb
 D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\OPCDataAccess.dll.config
 D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\EPPlus.xml
-D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\Common.Logging.Core.pdb
-D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\Common.Logging.Core.xml
-D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\Common.Logging.pdb
-D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\bin\Debug\Common.Logging.xml
 D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\obj\Debug\AutoLoggingConsole.csprojAssemblyReference.cache
 D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\obj\Debug\AutoLoggingConsole.csproj.CoreCompileInputs.cache
 D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\AutoLoggingConsole\obj\Debug\AutoLoggingConsole.csproj.CopyComplete

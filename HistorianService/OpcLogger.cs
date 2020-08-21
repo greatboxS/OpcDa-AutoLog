@@ -10,7 +10,6 @@ using System.ServiceProcess;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using TitaniumAS.Opc.Client.Da;
 
 namespace HistorianService
 {
@@ -27,13 +26,15 @@ namespace HistorianService
 
             DataLogger.Services.LoggingServices service = new DataLogger.Services.LoggingServices();
 
-            string path = AppDomain.CurrentDomain.BaseDirectory;//Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            string path = AppDomain.CurrentDomain.BaseDirectory;
 
             string exce = string.Empty;
             try
             {
+                Console.WriteLine("Start services");
                 service.ReadConfigurations(path);
 
+                Console.WriteLine("Start services");
                 service.RegistLoggingService();
 
                 DebugLog.WriteLine("Start services successfully");

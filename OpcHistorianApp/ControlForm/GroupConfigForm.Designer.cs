@@ -252,7 +252,7 @@
             // TagList
             // 
             this.TagList.DataSource = this.DSTags;
-            this.TagList.DisplayMember = "Name";
+            this.TagList.DisplayMember = "ItemName";
             this.TagList.Dock = System.Windows.Forms.DockStyle.Left;
             this.TagList.FormattingEnabled = true;
             this.TagList.Location = new System.Drawing.Point(3, 48);
@@ -262,7 +262,7 @@
             // 
             // DSTags
             // 
-            this.DSTags.DataSource = typeof(OPCDataAccess.Models.TagProperty);
+            this.DSTags.DataSource = typeof(OPCDataAccess.Models.OpcDaItem);
             // 
             // BottomPanel
             // 

@@ -39,7 +39,7 @@ namespace DataLogger.SqlLogger
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.ToString());
+                DebugLog.WriteLine(e.ToString());
                 return -1;
             }
         }
@@ -51,14 +51,14 @@ namespace DataLogger.SqlLogger
             return SqlExcuteNonQuery(connectionString, cmd);
         }
 
-        public int CreatTableIfNotExist(string table, IList<ColumnProperty> columnProperties)
+        public int CreatTableIfNotExist(string table, IList<SqlTableColumn> columnProperties)
         {
             string connectionString = SqlCmdBuilder.ConnectionString(SqlSetting);
             string cmd = SqlCmdBuilder.CreatTable(table, columnProperties);
             return SqlExcuteNonQuery(connectionString, cmd);
         }
 
-        public int AddColumnIfNotExist(string table, IList<ColumnProperty> columns)
+        public int AddColumnIfNotExist(string table, IList<SqlTableColumn> columns)
         {
             string connectionString = SqlCmdBuilder.ConnectionString(SqlSetting);
             foreach (var c in columns)

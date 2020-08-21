@@ -158,11 +158,12 @@ namespace DataLogger
 
             for (int i = 0; i < group.TotalTag; i++)
             {
-                TagProperty tag = new TagProperty();
-
-                tag.Name = sheet.Cells[$"D{i + 5}"].Text;
-                tag.TypeName = sheet.Cells[$"E{i + 5}"].Text;
-                group.GroupTags.Add(tag);
+                OpcDaItem tag = new OpcDaItem
+                {
+                    ItemName = sheet.Cells[$"D{i + 5}"].Text,
+                    TypeName = sheet.Cells[$"E{i + 5}"].Text,
+                };
+                group.Items.Add(tag);
             }
 
             return group;
@@ -217,7 +218,7 @@ namespace DataLogger
                 sheet.Cells["B9"].Value = group.SqlSetting.Password;
 
                 sheet.Cells["D2"].Value = "Total tag";
-                sheet.Cells["E2"].Value = group.GroupTags.Count.ToString();
+                sheet.Cells["E2"].Value = group.Items.Count.ToString();
 
                 sheet.Cells["D3"].Value = "Tag name";
                 sheet.Cells["E3"].Value = "Data Type";
@@ -226,10 +227,10 @@ namespace DataLogger
                 sheet.Cells["B10"].Value = group.State.ToString();
                 int i = 4;
 
-                foreach (var item in group.GroupTags)
+                foreach (var item in group.Items)
                 {
                     i++;
-                    sheet.Cells[$"D{i}"].Value = item.Name;
+                    sheet.Cells[$"D{i}"].Value = item.ItemName;
                     sheet.Cells[$"E{i}"].Value = item.TypeName;
                 }
 

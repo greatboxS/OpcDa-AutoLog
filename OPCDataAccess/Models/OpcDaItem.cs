@@ -7,13 +7,9 @@ using System.Threading.Tasks;
 
 namespace OPCDataAccess.Models
 {
-    public class TagProperty
+    public class OpcDaItem :Opc.Da.Item
     {
-        public string Name { get; set; }
+        public int Id { get; set; }
         public string TypeName { get; set; }
-        public string Value { get; set; }
-        public string  Error { get; set; }
-        public string Quantity { get; set; }
-        public string UpdateTime { get; set; }
     }
 }

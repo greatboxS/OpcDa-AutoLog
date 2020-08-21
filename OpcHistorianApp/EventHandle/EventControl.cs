@@ -55,13 +55,13 @@ namespace OpcHistorianApp
                 AddGroupCompleted.Invoke(groups, null);
         }
 
-        public static void UpdateCurrentGroup(int groupId, IList<TagProperty> tags)
+        public static void UpdateCurrentGroup(int groupId, IList<OpcDaItem> tags)
         {
             if (UpdateCurrentGroupEvent != null)
                 UpdateCurrentGroupEvent.Invoke(tags, groupId);
         }
 
-        public static void UpdateTagList(IList<TagProperty> tags, int id)
+        public static void UpdateTagList(IList<OpcDaItem> tags, int id)
         {
             if (UpdateTagListEvent != null)
                 UpdateTagListEvent.Invoke(tags, id);

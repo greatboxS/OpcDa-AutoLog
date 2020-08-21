@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Security.Permissions;
 using System.Text;
@@ -17,11 +18,14 @@ namespace DataLogger.Services
     public class LoggingServices
     {
         private ExcelHandle ExcelHandle = new ExcelHandle();
-        public GlobalProvider GlobalProvider = new GlobalProvider();
         private CustomSqlLog SqlLog;
+
+        public static OpcDaClient OpcDaClient { get; set; }
+        public static OpcDaWrapperCollection WrapColletion { get; set; } = new OpcDaWrapperCollection();
+
         public void ReadConfigurations(string path)
         {
-            string configPath = path;//$"{Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)}/AutoLogging/";
+            string configPath = path;
 
             string[] files = Directory.GetFiles(configPath);
 
@@ -39,7 +43,7 @@ namespace DataLogger.Services
                         {
                             if (grp.TotalTag == 0) continue;
                             id++;
-                            GlobalProvider.ConfigurationWrapper.Add(new ConfigurationWrapper(group, id));
+                            WrapColletion.OpcDaSubcriptionWrapper.Add(new OpcDaSubcriptionWrapper(grp));
                             DebugLog.WriteLine($"Add new file config, Id: {id}");
                         }
 
@@ -47,7 +51,7 @@ namespace DataLogger.Services
                 }
             }
 
-            if (GlobalProvider.ConfigurationWrapper.Count == 0)
+            if (WrapColletion.OpcDaSubcriptionWrapper.Count == 0)
                 ReadConfigurations(path);
 
             CheckSQlServerService();
@@ -57,65 +61,64 @@ namespace DataLogger.Services
         {
             string serverName = string.Empty;
 
-            if (GlobalProvider.ConfigurationWrapper.Count == 0)
+            if (WrapColletion.OpcDaSubcriptionWrapper.Count == 0)
                 return false;
-            //throw new OpcDaQueryException(OPCDataAccess.AppDefinition.OpcDaException.SERVER_HAS_NOT_CONNECTED_YET, "Can not get server name from configuration file");
 
-            foreach (var item in GlobalProvider.ConfigurationWrapper)
+            foreach (var item in WrapColletion.OpcDaSubcriptionWrapper)
             {
-                if (item.LoggingGroup.Count != 0)
+                if (item.LoggingGroup.OPCServerName != string.Empty)
                 {
-                    foreach (var grp in item.LoggingGroup)
-                    {
-                        if (grp.OPCServerName != string.Empty)
-                        {
-                            serverName = grp.OPCServerName;
-                            break;
-                        }
-                    }
+                    serverName = item.LoggingGroup.OPCServerName;
+                    break;
                 }
 
                 if (serverName != string.Empty)
                     break;
-
             }
 
             DebugLog.WriteLine($"OPCDA Server name: {serverName}");
 
             if (serverName != string.Empty)
-                return TitaniumOpcDaControl.StartOpcDaServer(serverName);
+            {
+                var serverList = OpcDaServerDefinition.GetAvailableServers(Opc.Specification.COM_DA_30);
+                var sv = serverList.Where(i => i.Name == serverName).FirstOrDefault();
+                if (sv == null)
+                    return false;
+
+                OpcDaClient = new OpcDaClient(sv.Url);
+                return OpcDaClient.ServerDefinition.ServerStatus();
+            }
 
             return false;
-            //throw new OpcDaQueryException(OPCDataAccess.AppDefinition.OpcDaException.ERROR, "Can not find out the OpcDA server name");
         }
 
         public bool CheckSQlServerService()
         {
-            Dictionary<string, List<TagProperty>> SortedTag = new Dictionary<string, List<TagProperty>>();
+            Dictionary<string, List<OpcDaItem>> SortedTag = new Dictionary<string, List<OpcDaItem>>();
             SqlSetting sqlSetting = null;
             try
             {
                 List<LoggingGroup> lGroup = new List<LoggingGroup>();
 
-                foreach (var item in GlobalProvider.ConfigurationWrapper)
+                foreach (var item in WrapColletion.OpcDaSubcriptionWrapper)
                 {
-                    lGroup.AddRange(item.LoggingGroup);
+                    lGroup.Add(item.LoggingGroup);
                 }
 
                 var group = lGroup.GroupBy(i => i.SqlSetting.Table);
 
                 foreach (var grp in group)
                 {
-                    List<TagProperty> tags = new List<TagProperty>();
+                    List<OpcDaItem> tags = new List<OpcDaItem>();
 
                     foreach (var g in grp.ToList())
                     {
                         if (sqlSetting == null)
                             sqlSetting = g.SqlSetting;
 
-                        foreach (var tag in g.GroupTags)
+                        foreach (var tag in g.Items)
                         {
-                            if (tags.Where(i => i.Name == tag.Name).Count() == 0) tags.Add(tag);
+                            if (tags.Where(i => i.ItemName == tag.ItemName).Count() == 0) tags.Add(tag);
                         }
                     }
 
@@ -136,7 +139,7 @@ namespace DataLogger.Services
 
             foreach (var tagGroup in SortedTag)
             {
-                var columnDefinitions = MappingItem.GetTableColumns(tagGroup.Value);
+                var columnDefinitions = MappingItem.GetColumnProperties(tagGroup.Value.ToArray());
 
                 if (SqlLog.CreatTableIfNotExist(tagGroup.Key, columnDefinitions) != -1) DebugLog.WriteLine("Success");
 
@@ -156,45 +159,50 @@ namespace DataLogger.Services
                 return;
             }
 
-            DebugLog.WriteLine($"Total group: {GlobalProvider.ConfigurationWrapper.Count}");
+            DebugLog.WriteLine($"Total group: {WrapColletion.OpcDaSubcriptionWrapper.Count}");
 
-            foreach (var config in GlobalProvider.ConfigurationWrapper)
+            foreach (var config in WrapColletion.OpcDaSubcriptionWrapper)
             {
-                foreach (var group in config.LoggingGroup)
-                {
-                    DebugLog.WriteLine($"Registing new file configuration group, Id: {group.Id}");
-                    TitaniumOpcDaControl.CreateOpcDaGroup(group, true);
-                }
+                DebugLog.WriteLine($"Registing new file configuration group, Id: {config.Id}");
+                config.RegistSubscription(OpcDaClient.ServerDefinition.OpcDaServer);
+
+                System.Threading.Timer CircleReadingTimer = new System.Threading.Timer(CircleReadingTimerCallback, config, 0,
+                    config.LoggingGroup.IntervalUpdateTime);
+            }
+        }
+
+        private void CircleReadingTimerCallback(object state)
+        {
+            try
+            {
+                var wrapper = state as OpcDaSubcriptionWrapper;
+                Console.WriteLine($"Logging : {wrapper.Id}");
+                if (wrapper.WriteLogging() > 0)
+                    Console.WriteLine("Success");
+                else
+                    Console.WriteLine("Failed");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
             }
         }
     }
 
-    public class GlobalProvider
+    public class OpcDaWrapperCollection
     {
-        public List<ConfigurationWrapper> ConfigurationWrapper { get; set; }
-
-        public GlobalProvider()
+        public List<OpcDaSubcriptionWrapper> OpcDaSubcriptionWrapper { get; set; }
+        public int Add(OpcDaSubcriptionWrapper wrapper)
         {
-            ConfigurationWrapper = new List<ConfigurationWrapper>();
-        }
-    }
+            if (wrapper != null)
+                OpcDaSubcriptionWrapper.Add(wrapper);
 
-    public class ConfigurationWrapper
-    {
-        public ConfigurationWrapper(List<LoggingGroup> group)
-        {
-            if (group != null)
-                LoggingGroup = new List<LoggingGroup>(group);
+            return OpcDaSubcriptionWrapper.Count;
         }
 
-        public ConfigurationWrapper(IList<LoggingGroup> group, int Id)
+        public OpcDaWrapperCollection()
         {
-            if (group != null)
-                LoggingGroup = new List<LoggingGroup>(group);
+            OpcDaSubcriptionWrapper = new List<OpcDaSubcriptionWrapper>();
         }
-
-        public int Id { get; set; }
-
-        public List<LoggingGroup> LoggingGroup = new List<LoggingGroup>();
     }
 }

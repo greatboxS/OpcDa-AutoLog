@@ -1,7 +1,7 @@
 ﻿using DataLogger;
+using DataLogger.Services;
 using DataLogger.SqlLogger;
 using Newtonsoft.Json;
-using OPCDataAccess.Controls;
 using OPCDataAccess.Models;
 using OpcHistorianApp.ControlForm;
 using System;
@@ -18,7 +18,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.XPath;
-using TitaniumAS.Opc.Client.Da.Browsing;
 
 namespace OpcHistorianApp
 {
@@ -31,13 +30,13 @@ namespace OpcHistorianApp
 
         #region Variables
         private static int ItemPropCounter = 0;
-        private IList<TagProperty> Tags;
-        private IList<TagProperty> SelectedTag;
+        private IList<OpcDaItem> Tags;
+        private IList<OpcDaItem> SelectedTag;
         private LogScheduleForm LogScheduleForm;
         private CustomSqlLog CustomSqlLog;
         string CurrentOpcDaServerName = string.Empty;
 
-
+        List<Opc.Server> ServerList = new List<Opc.Server>();
         #endregion
 
         private void MainWindow_Load(object sender, EventArgs e)
@@ -46,20 +45,21 @@ namespace OpcHistorianApp
         }
         private void UpdateTreeViewServer()
         {
-            var serverList = TitaniumOpcDaControl.GetOpcDaServer();
+            Opc.Server[] servers = OpcDaServerDefinition.GetAvailableServers(Opc.Specification.COM_DA_30);
+            ServerList.AddRange(servers);
 
-            foreach (var sv in serverList)
+            foreach (var sv in ServerList)
             {
-                SvTree.Nodes.Add(sv.ProgId, sv.ProgId);
+                SvTree.Nodes.Add(sv.Name, sv.Name);
             }
         }
-        private void UpdateItemPanel(IList<TagProperty> tags)
+        private void UpdateItemPanel(IList<OpcDaItem> tags)
         {
             ItemPropCounter = 0;
             ItemPropertyPanel.Controls.Clear();
             foreach (var tag in tags)
             {
-                ItemPropertyPanel.Controls.Add(new TagPropertyControl(tag), 0, ItemPropCounter);
+                ItemPropertyPanel.Controls.Add(new OpcDaItemControl(tag), 0, ItemPropCounter);
                 ItemPropCounter++;
             }
         }
@@ -69,8 +69,8 @@ namespace OpcHistorianApp
             EventControl.TagSelected += EventControl_TagSelected;
             EventControl.AddGroupCompleted += EventControl_AddGroupCompleted;
 
-            Tags = new List<TagProperty>();
-            SelectedTag = new List<TagProperty>();
+            Tags = new List<OpcDaItem>();
+            SelectedTag = new List<OpcDaItem>();
             CustomSqlLog = new CustomSqlLog(new SqlSetting());
 
             this.ItemPropertyPanel.ContextMenuStrip = MainWindowsMenu;
@@ -96,7 +96,7 @@ namespace OpcHistorianApp
                 {
                     var EventSender = sender as EventSender;
 
-                    var same = SelectedTag.Where(i => i.Name == EventSender.TagSelection.TagProp.Name);
+                    var same = SelectedTag.Where(i => i.ItemName == EventSender.TagSelection.TagProp.ItemName);
 
                     if (EventSender.TagSelection.Selected)
                     {
@@ -149,7 +149,7 @@ namespace OpcHistorianApp
             string serverPropId = e.Node.Text;
 
             this.ItemPropertyPanel.Controls.Clear();
-            SelectedTag = new List<TagProperty>();
+            SelectedTag = new List<OpcDaItem>();
 
             BeginInvoke(new MethodInvoker(() =>
             {
@@ -157,11 +157,19 @@ namespace OpcHistorianApp
                 {
                     this.Text = serverPropId;
 
-                    var result = TitaniumOpcDaControl.GetServerTags(serverPropId);
+                    var sv = ServerList.Where(i => i.Name == serverPropId).FirstOrDefault();
+                    if (sv == null)
+                        return;
+
+                    OpcDaServerDefinition opcDaServerDefinition = new OpcDaServerDefinition(sv.Url);
+
+                    LoggingServices.OpcDaClient = new OpcDaClient(opcDaServerDefinition);
+
+                    var result = LoggingServices.OpcDaClient.ServerDefinition.OpcDaItems;
 
                     if (result == null) return;
 
-                    Tags = new List<TagProperty>(result);
+                    Tags = new List<OpcDaItem>(result);
 
                     CurrentOpcDaServerName = serverPropId;
 
@@ -183,7 +191,7 @@ namespace OpcHistorianApp
         private void UnSelectAllMenuItem_Click(object sender, EventArgs e)
         {
             EventControl.SelectAllTags(false);
-            SelectedTag = new List<TagProperty>();
+            SelectedTag = new List<OpcDaItem>();
         }
 
         private void NewGroupMenuItem_Click(object sender, EventArgs e)
@@ -207,7 +215,7 @@ namespace OpcHistorianApp
             {
                 OPCServerName = CurrentOpcDaServerName,
                 GroupName = "Group",
-                GroupTags = SelectedTag.ToList(),
+                Items = SelectedTag.ToList(),
                 SqlSetting = setting != null ? setting : new SqlSetting(),
             };
 

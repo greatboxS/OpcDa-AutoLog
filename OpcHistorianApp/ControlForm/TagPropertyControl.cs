@@ -7,15 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TitaniumAS.Opc.Client.Da.Browsing;
 using OPCDataAccess.Models;
 
 namespace OpcHistorianApp.ControlForm
 {
-    public partial class TagPropertyControl : UserControl
+    public partial class OpcDaItemControl : UserControl
     {
         public OPCDataAccess.AppDefinition.UserDataType varType = OPCDataAccess.AppDefinition.UserDataType.UNDEFINE;
-        public TagPropertyControl()
+        public OpcDaItemControl()
         {
             InitializeComponent();
             EventControl.AllTagSelected += EventControl_AllTagSelected;
@@ -30,9 +29,9 @@ namespace OpcHistorianApp.ControlForm
                 this.TagSelection.Checked = false;
         }
 
-        private TagProperty TagProp;
+        private OpcDaItem TagProp;
 
-        public TagPropertyControl(TagProperty prop)
+        public OpcDaItemControl(OpcDaItem prop)
         {
             InitializeComponent();
 
@@ -40,13 +39,13 @@ namespace OpcHistorianApp.ControlForm
 
             EventControl.AllTagSelected += EventControl_AllTagSelected;
         }
-        public void UpdateTagProps(TagProperty prop)
+        public void UpdateTagProps(OpcDaItem prop)
         {
             TagProp = prop;
 
-            txtTagName.Text = prop.Name;
+            txtTagName.Text = prop.ItemName;
             txtTagType.Text = prop.TypeName;
-            txtError.Text = prop.Quantity;
+            txtError.Text = prop.Active.ToString();
         }
 
         private void TagSelection_CheckedChanged(object sender, EventArgs e)

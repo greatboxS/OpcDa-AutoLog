@@ -69,6 +69,38 @@
     <Reference Include="EPPlus, Version=5.2.1.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
       <HintPath>..\packages\EPPlus.5.2.1\lib\net45\EPPlus.dll</HintPath>
     </Reference>
+    <Reference Include="OpcComRcw, Version=2.0.105.1, Culture=neutral, PublicKeyToken=9a40e993cbface53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\OpcNetApi Assemblies\OpcComRcw.dll</HintPath>
+    </Reference>
+    <Reference Include="OpcNetApi, Version=2.1.105.1, Culture=neutral, PublicKeyToken=9a40e993cbface53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\OpcNetApi Assemblies\OpcNetApi.dll</HintPath>
+    </Reference>
+    <Reference Include="OpcNetApi.Com, Version=2.1.105.1, Culture=neutral, PublicKeyToken=9a40e993cbface53, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\OpcNetApi Assemblies\OpcNetApi.Com.dll</HintPath>
+    </Reference>
+    <Reference Include="OpcRcw.Ae">
+      <HintPath>..\OpcNetApi Assemblies\OpcRcw.Ae.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="OpcRcw.Comn">
+      <HintPath>..\OpcNetApi Assemblies\OpcRcw.Comn.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="OpcRcw.Da">
+      <HintPath>..\OpcNetApi Assemblies\OpcRcw.Da.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="OpcRcw.Dx">
+      <HintPath>..\OpcNetApi Assemblies\OpcRcw.Dx.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="OpcRcw.Hda">
+      <HintPath>..\OpcNetApi Assemblies\OpcRcw.Hda.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -83,12 +115,11 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="TitaniumAS.Opc.Client, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\TitaniumAS.Opc.Client.1.0.2.0\lib\net40\TitaniumAS.Opc.Client.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Excel\ExcelHandle.cs" />
+    <Compile Include="OpDaNetApi\OpcDAClient.cs" />
+    <Compile Include="OpDaNetApi\OpcDaServerDefinition.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DebugLog.cs" />
     <Compile Include="Services\LoggingServices.cs" />
@@ -96,8 +127,7 @@
     <Compile Include="SqlLogger\LoggerContext.cs" />
     <Compile Include="SqlLogger\LoggerControl.cs" />
     <Compile Include="SqlLogger\SqlCmdBuilder.cs" />
-    <Compile Include="Titanium\OpcDaGroupWrapper.cs" />
-    <Compile Include="Titanium\TitaniumOpcDaControl.cs" />
+    <Compile Include="OpDaNetApi\OpcDaSubcriptionWrapper.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OPCDataAccess\OPCDataAccess.csproj">
