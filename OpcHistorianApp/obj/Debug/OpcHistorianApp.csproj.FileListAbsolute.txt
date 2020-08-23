@@ -109,7 +109,6 @@ D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\OpcHistorianApp\bin
 D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\OpcHistorianApp\bin\Debug\Newtonsoft.Json.xml
 D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\OpcHistorianApp\bin\Debug\EPPlus.xml
 D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\OpcHistorianApp\obj\Debug\OpcHistorianApp.csprojAssemblyReference.cache
-D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\OpcHistorianApp\obj\Debug\Interop.VBIDE.dll
 D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\OpcHistorianApp\obj\Debug\OpcHistorianApp.csproj.ResolveComReference.cache
 D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\OpcHistorianApp\obj\Debug\OpcHistorianApp.ControlForm.AboutForm.resources
 D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\OpcHistorianApp\obj\Debug\OpcHistorianApp.ControlForm.LogScheduleForm.resources

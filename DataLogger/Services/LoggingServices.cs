@@ -178,13 +178,19 @@ namespace DataLogger.Services
                 var wrapper = state as OpcDaSubcriptionWrapper;
                 Console.WriteLine($"Logging : {wrapper.Id}");
                 if (wrapper.WriteLogging() > 0)
+                {
+                    DebugLog.WriteStatictis();
                     Console.WriteLine("Success");
+                }
                 else
+                {
+                    DebugLog.WriteStatictis(true);
                     Console.WriteLine("Failed");
+                }
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.ToString());
+                DebugLog.WriteLine(ex.ToString());
             }
         }
     }
