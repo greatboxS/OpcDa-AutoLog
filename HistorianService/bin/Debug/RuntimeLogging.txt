@@ -41,3 +41,11 @@
 04:48:43, 21/08/2020 ==> Success
 04:48:44, 21/08/2020 ==> Logging : cdf0a2c6-1ccb-40ef-ab9d-2b3e9028b167
 04:48:44, 21/08/2020 ==> Success
+23/08/2020, 18:19:52 ==> config file: D:\WorkShop\AppData\VS19\CSharp\2_Winform\OPC\OPCDA_Solution\HistorianService\bin\Debug\config.xlsx
+23/08/2020, 18:19:53 ==> Add new file config, Id: 1
+23/08/2020, 18:19:53 ==> Success
+23/08/2020, 18:19:53 ==> OPCDA Server name: Mitsubishi.MXOPC
+23/08/2020, 18:19:54 ==> Connecting to OpcDa Server successfully
+23/08/2020, 18:19:54 ==> Total group: 1
+23/08/2020, 18:19:54 ==> Registing new file configuration group, Id: 
+23/08/2020, 18:19:54 ==> Start services successfully

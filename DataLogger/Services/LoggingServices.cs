@@ -168,6 +168,8 @@ namespace DataLogger.Services
 
                 System.Threading.Timer CircleReadingTimer = new System.Threading.Timer(CircleReadingTimerCallback, config, 0,
                     config.LoggingGroup.IntervalUpdateTime);
+
+                config.Timer = CircleReadingTimer;
             }
         }
 
